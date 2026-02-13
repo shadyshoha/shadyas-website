@@ -1,0 +1,153 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Diensten",
+    "about": "Over Ons",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Uw Betrouwbare IT-Partner in Brussel",
+    "subtitle": "Shady AS SRL levert innovatieve IT-adviesoplossingen om uw bedrijf te laten groeien in het digitale tijdperk.",
+    "cta": "Neem Contact Op",
+    "learnMore": "Onze Diensten"
+  },
+  "services": {
+    "title": "Onze Diensten",
+    "subtitle": "Uitgebreide IT-oplossingen op maat van uw bedrijfsbehoeften",
+    "strategy": {
+      "title": "IT-Strategie & Advies",
+      "short": "Stem uw technologie af op uw bedrijfsdoelen door deskundige strategische planning.",
+      "description": "Wij helpen organisaties hun IT-roadmap te definiëren, processen te optimaliseren en weloverwogen technologische beslissingen te nemen. Onze consultants werken nauw samen met uw managementteam.",
+      "features": ["Roadmap voor digitale transformatie", "IT-governance & compliance", "Technologische beoordeling", "Procesoptimalisatie"]
+    },
+    "cloud": {
+      "title": "Cloud-oplossingen",
+      "short": "Migreer, beheer en optimaliseer uw cloudinfrastructuur voor maximale efficiëntie.",
+      "description": "Van cloudmigratie tot doorlopend beheer, wij helpen u het volledige potentieel van cloud computing te benutten. Of het nu AWS, Azure of Google Cloud is, wij ontwerpen oplossingen die meegroeien met uw bedrijf.",
+      "features": ["Cloudmigratiestrategie", "Multi-cloud beheer", "Kostenoptimalisatie", "Cloudbeveiliging"]
+    },
+    "security": {
+      "title": "Cybersecurity",
+      "short": "Bescherm uw bedrijf met uitgebreide beveiligingsoplossingen en risicobeheer.",
+      "description": "In een voortdurend veranderend dreigingslandschap bieden wij robuuste cybersecurityoplossingen om uw gegevens, infrastructuur en reputatie te beschermen.",
+      "features": ["Beveiligingsaudits & -beoordelingen", "Planning voor incidentrespons", "Compliancebeheer", "Training voor beveiligingsbewustzijn"]
+    },
+    "development": {
+      "title": "Softwareontwikkeling",
+      "short": "Maatwerkoplossingen ontworpen om uw unieke bedrijfsuitdagingen op te lossen.",
+      "description": "Ons ontwikkelteam bouwt op maat gemaakte applicaties die processen stroomlijnen en concurrentievoordelen creëren. Van webapplicaties tot bedrijfssystemen, wij leveren kwaliteitssoftware.",
+      "features": ["Maatwerk webapplicaties", "API-ontwikkeling & integratie", "Modernisering van legacy-systemen", "Agile ontwikkelmethodologie"]
+    },
+    "data": {
+      "title": "Data & Analytics",
+      "short": "Transformeer uw data in bruikbare inzichten voor slimme beslissingen.",
+      "description": "Ontsluit de kracht van uw data met onze analytische oplossingen. Wij helpen u data te verzamelen, verwerken en visualiseren om trends te ontdekken en datagedreven beslissingen te nemen.",
+      "features": ["Business Intelligence dashboards", "Datawarehouse-ontwerp", "Voorspellende analytics", "Datagovernance"]
+    },
+    "support": {
+      "title": "IT-Support & Managed Services",
+      "short": "Betrouwbare IT-ondersteuning om uw operaties dag en nacht soepel te laten verlopen.",
+      "description": "Concentreer u op uw kernactiviteiten terwijl wij uw IT beheren. Onze managed services bieden proactieve monitoring, onderhoud en support voor maximale uptime.",
+      "features": ["Infrastructuurbeheer", "Helpdeskdiensten", "Proactief onderhoud"]
+    }
+  },
+  "whyUs": {
+    "title": "Waarom Kiezen voor Shady AS?",
+    "subtitle": "Wij combineren diepgaande expertise met een klantgerichte aanpak",
+    "experience": {
+      "value": "6",
+      "label": "Jaar Ervaring"
+    },
+    "clients": {
+      "value": "20+",
+      "label": "Tevreden Klanten"
+    },
+    "location": {
+      "value": "Brussel",
+      "label": "Gevestigd in België"
+    }
+  },
+  "cta": {
+    "title": "Klaar om Uw IT te Transformeren?",
+    "subtitle": "Laten we bespreken hoe wij uw bedrijf kunnen helpen groeien met de juiste technologische oplossingen.",
+    "button": "Neem Vandaag Contact Op"
+  },
+  "about": {
+    "title": "Over Shady AS",
+    "subtitle": "Uw betrouwbare IT-adviespartner vanaf dag één",
+    "story": {
+      "title": "Ons Verhaal",
+      "p1": "Opgericht in Brussel, is Shady AS SRL geboren uit een passie om bedrijven te helpen navigeren in de complexe wereld van informatietechnologie. Wij geloven dat elke organisatie, ongeacht de grootte, toegang verdient tot deskundig IT-advies.",
+      "p2": "Door de jaren heen zijn we gegroeid van een klein adviesbureau tot een volwaardige IT-partner, met klanten in heel België en daarbuiten. Ons diepgaand begrip van het Belgische en Europese bedrijfslandschap onderscheidt ons.",
+      "p3": "Vandaag blijven we innoveren en ons aanpassen, zodat onze klanten voorop blijven lopen in een voortdurend veranderende digitale wereld."
+    },
+    "values": {
+      "title": "Onze Waarden",
+      "innovation": {
+        "title": "Innovatie",
+        "description": "Wij omarmen geavanceerde technologieën en creatieve oplossingen om complexe uitdagingen op te lossen."
+      },
+      "integrity": {
+        "title": "Integriteit",
+        "description": "Wij werken met transparantie en eerlijkheid, en bouwen vertrouwen op bij elke interactie."
+      },
+      "excellence": {
+        "title": "Excellentie",
+        "description": "Wij streven naar de hoogste normen in alles wat wij aan onze klanten leveren."
+      },
+      "partnership": {
+        "title": "Partnerschap",
+        "description": "Wij bouwen duurzame relaties op en werken naast onze klanten als echte partners."
+      }
+    },
+    "expertise": {
+      "title": "Onze Expertise",
+      "description": "Ons team brengt diverse expertise samen op het gebied van cloudarchitectuur, cybersecurity, software-engineering, datawetenschap en IT-beheer. Wij investeren voortdurend in training en certificeringen."
+    },
+    "brussels": {
+      "title": "Waarom Brussel?",
+      "description": "Als hart van Europa en thuisbasis van belangrijke internationale instellingen biedt Brussel een unieke zakelijke omgeving. Onze locatie stelt ons in staat klanten in heel België en de EU te bedienen, met diepgaande kennis van lokale regelgeving."
+    }
+  },
+  "contact": {
+    "title": "Contacteer Ons",
+    "subtitle": "Neem contact op — we horen graag van u",
+    "info": {
+      "title": "Contactinformatie",
+      "address": "Boulevard du Souverain 25, 1170 Brussel, België",
+      "email": "contact@shadyas.com",
+      "hours": "Openingstijden",
+      "hoursValue": "Maandag – Vrijdag: 9:00 – 18:00",
+      "addressLabel": "Adres",
+      "emailLabel": "E-mail",
+      "emailCta": "E-mail ons"
+    }
+  },
+  "meta": {
+    "home": {
+      "title": "IT-Advies Brussel",
+      "description": "Expert IT-advies in Brussel. Shady AS SRL biedt cloudoplossingen, cybersecurity, softwareontwikkeling, data-analyse en managed IT-diensten."
+    },
+    "services": {
+      "title": "Onze IT-Diensten",
+      "description": "Ontdek onze IT-diensten: cloudmigratie, cybersecurity, maatwerk softwareontwikkeling, data-analyse en managed IT-support in Brussel, Belgi\u00eb."
+    },
+    "about": {
+      "title": "Over Ons",
+      "description": "Shady AS SRL is een betrouwbare IT-adviespartner in Brussel met meer dan 6 jaar ervaring in cloud, beveiliging en digitale transformatie."
+    },
+    "contact": {
+      "title": "Contacteer Ons",
+      "description": "Contacteer Shady AS SRL voor IT-advies in Brussel. Vorstlaan 25, 1170 Brussel. E-mail: contact@shadyas.com. Ma\u2013Vr 9:00\u201318:00."
+    }
+  },
+  "footer": {
+    "description": "IT-advies en -oplossingen gevestigd in Brussel. Wij helpen bedrijven te floreren in het digitale tijdperk.",
+    "quickLinks": "Snelkoppelingen",
+    "contactInfo": "Contactgegevens",
+    "vatLabel": "BTW",
+    "vat": "BE 0787.771.246",
+    "copyright": "\u00a9 2025 Shady AS SRL. Alle rechten voorbehouden.",
+    "tagline": "IT-Advies \u00b7 Brussel, Belgi\u00eb"
+  }
+}
