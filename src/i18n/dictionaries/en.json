@@ -2,6 +2,7 @@
   "nav": {
     "home": "Home",
     "services": "Services",
+    "blog": "Blog",
     "about": "About",
     "contact": "Contact"
   },
@@ -66,6 +67,32 @@
       "value": "Brussels",
       "label": "Based in Belgium"
     }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about our services",
+    "items": [
+      {
+        "question": "What industries do you work with?",
+        "answer": "We work with businesses across various industries including finance, healthcare, retail, logistics, and the public sector. Our solutions are tailored to meet the specific regulatory and operational needs of each sector."
+      },
+      {
+        "question": "How does a typical engagement begin?",
+        "answer": "We start with a free consultation to understand your business goals and current IT landscape. From there, we propose a tailored plan with clear milestones, timelines, and deliverables."
+      },
+      {
+        "question": "Do you offer ongoing support after a project is delivered?",
+        "answer": "Yes. We offer managed services and IT support packages to ensure your systems remain secure, up to date, and running smoothly long after the initial project is complete."
+      },
+      {
+        "question": "Can you work with our existing IT team?",
+        "answer": "Absolutely. We frequently collaborate with in-house IT teams, providing specialised expertise to complement their existing capabilities without disrupting workflows."
+      },
+      {
+        "question": "Are your services available outside of Belgium?",
+        "answer": "Yes. While we are based in Brussels, we serve clients across the European Union and can work remotely or on-site depending on your needs."
+      }
+    ]
   },
   "cta": {
     "title": "Ready to Transform Your IT?",
@@ -139,7 +166,19 @@
     "contact": {
       "title": "Contact Us",
       "description": "Contact Shady AS SRL for IT consulting in Brussels. Boulevard du Souverain 25, 1170 Brussels. Email: contact@shadyas.com. Mon\u2013Fri 9:00\u201318:00."
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "Insights, guides, and best practices on IT consulting, cloud, cybersecurity, and digital transformation from Shady AS SRL in Brussels."
     }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Insights & best practices from our IT experts",
+    "readMore": "Read article",
+    "backToBlog": "Back to blog",
+    "minRead": "min read",
+    "publishedOn": "Published on"
   },
   "footer": {
     "description": "IT consulting and solutions based in Brussels. Helping businesses thrive in the digital age.",

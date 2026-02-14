@@ -2,6 +2,7 @@
   "nav": {
     "home": "Home",
     "services": "Diensten",
+    "blog": "Blog",
     "about": "Over Ons",
     "contact": "Contact"
   },
@@ -66,6 +67,32 @@
       "value": "Brussel",
       "label": "Gevestigd in België"
     }
+  },
+  "faq": {
+    "title": "Veelgestelde Vragen",
+    "subtitle": "Vind antwoorden op veelgestelde vragen over onze diensten",
+    "items": [
+      {
+        "question": "Met welke sectoren werken jullie?",
+        "answer": "Wij werken met bedrijven uit diverse sectoren, waaronder financiën, gezondheidszorg, retail, logistiek en de publieke sector. Onze oplossingen worden afgestemd op de specifieke regelgevings- en operationele behoeften van elke sector."
+      },
+      {
+        "question": "Hoe begint een typische samenwerking?",
+        "answer": "We beginnen met een gratis consultatie om uw bedrijfsdoelen en huidig IT-landschap te begrijpen. Vervolgens stellen we een plan op maat voor met duidelijke mijlpalen, tijdlijnen en deliverables."
+      },
+      {
+        "question": "Bieden jullie doorlopende ondersteuning na oplevering van een project?",
+        "answer": "Ja. Wij bieden managed services en IT-supportpakketten om ervoor te zorgen dat uw systemen veilig, up-to-date en optimaal blijven functioneren, ook lang na de afronding van het initiële project."
+      },
+      {
+        "question": "Kunnen jullie samenwerken met ons bestaande IT-team?",
+        "answer": "Absoluut. Wij werken regelmatig samen met interne IT-teams en bieden gespecialiseerde expertise om hun bestaande capaciteiten aan te vullen zonder werkprocessen te verstoren."
+      },
+      {
+        "question": "Zijn jullie diensten ook beschikbaar buiten België?",
+        "answer": "Ja. Hoewel we in Brussel gevestigd zijn, bedienen we klanten in de hele Europese Unie en kunnen we op afstand of ter plaatse werken, afhankelijk van uw behoeften."
+      }
+    ]
   },
   "cta": {
     "title": "Klaar om Uw IT te Transformeren?",
@@ -139,7 +166,19 @@
     "contact": {
       "title": "Contacteer Ons",
       "description": "Contacteer Shady AS SRL voor IT-advies in Brussel. Vorstlaan 25, 1170 Brussel. E-mail: contact@shadyas.com. Ma\u2013Vr 9:00\u201318:00."
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "Inzichten, gidsen en best practices over IT-advies, cloud, cybersecurity en digitale transformatie van Shady AS SRL in Brussel."
     }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Inzichten en best practices van onze IT-experts",
+    "readMore": "Lees artikel",
+    "backToBlog": "Terug naar blog",
+    "minRead": "min leestijd",
+    "publishedOn": "Gepubliceerd op"
   },
   "footer": {
     "description": "IT-advies en -oplossingen gevestigd in Brussel. Wij helpen bedrijven te floreren in het digitale tijdperk.",

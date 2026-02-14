@@ -1,18 +1,60 @@
 @import "tailwindcss";
 
+/**
+ * Color tokens – single source of truth.
+ * SVG assets (logo.svg, icon.svg) use: --primary, --accent-light
+ * Update those files when changing the palette.
+ */
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --navy: #1e3a5f;
-  --accent-blue: #3b82f6;
+  /* Brand colors */
+  --primary: #090f1f;
+  --accent: #022a82;
+  --accent-light: #2563eb;
+  --accent-hover: #011d5c;
+  --section-bg: rgb(241 245 249 / 0.6);
+  /* Aliases */
+  --navy: var(--primary);
+  --accent-blue: var(--accent);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+  --color-accent-hover: var(--accent-hover);
   --color-navy: var(--navy);
-  --color-accent-blue: var(--accent-blue);
+  --color-accent-blue: var(--accent);
+  --color-section-bg: var(--section-bg);
   --font-sans: var(--font-inter);
+}
+
+.hero-gradient {
+  position: relative;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+}
+.hero-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.section-with-noise {
+  position: relative;
+}
+.section-with-noise::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.08;
+  pointer-events: none;
 }
 
 body {

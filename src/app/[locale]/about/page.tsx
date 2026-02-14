@@ -47,12 +47,7 @@ export default async function AboutPage({
   return (
     <div>
       {/* Page Header */}
-      <section
-        className="py-20 text-center text-white"
-        style={{
-          background: "linear-gradient(135deg, #1e3a5f 0%, #2d5a8e 100%)",
-        }}
-      >
+      <section className="hero-gradient py-20 text-center text-white">
         <div className="mx-auto max-w-4xl px-4">
           <h1 className="text-4xl font-bold md:text-5xl">
             {dict.about.title}
@@ -66,7 +61,7 @@ export default async function AboutPage({
       {/* Story Section */}
       <section className="bg-white py-20">
         <div className="mx-auto max-w-4xl px-4">
-          <h2 className="mb-8 text-3xl font-bold text-[#1e3a5f]">
+          <h2 className="mb-8 text-3xl font-bold text-primary">
             {dict.about.story.title}
           </h2>
           <div className="space-y-6 text-lg leading-relaxed text-gray-600">
@@ -78,9 +73,9 @@ export default async function AboutPage({
       </section>
 
       {/* Values Section */}
-      <section className="bg-gray-50 py-20">
+      <section className="section-with-noise bg-section-bg py-20">
         <div className="mx-auto max-w-6xl px-4">
-          <h2 className="mb-12 text-center text-3xl font-bold text-[#1e3a5f]">
+          <h2 className="mb-12 text-center text-3xl font-bold text-primary">
             {dict.about.values.title}
           </h2>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -89,10 +84,10 @@ export default async function AboutPage({
               return (
                 <div
                   key={key}
-                  className="rounded-2xl border border-gray-100 bg-white p-6 text-center shadow-sm transition-shadow hover:shadow-md"
+                  className="border border-gray-200 bg-white p-6 text-center hover:border-gray-300 transition-colors"
                 >
                   <div className="mb-4 text-4xl">{icon}</div>
-                  <h3 className="mb-2 text-xl font-bold text-[#1e3a5f]">
+                  <h3 className="mb-2 text-xl font-bold text-primary">
                     {value.title}
                   </h3>
                   <p className="text-gray-600">{value.description}</p>
@@ -106,7 +101,7 @@ export default async function AboutPage({
       {/* Expertise Section */}
       <section className="bg-white py-20">
         <div className="mx-auto max-w-4xl px-4">
-          <h2 className="mb-6 text-3xl font-bold text-[#1e3a5f]">
+          <h2 className="mb-6 text-3xl font-bold text-primary">
             {dict.about.expertise.title}
           </h2>
           <p className="text-lg leading-relaxed text-gray-600">
@@ -116,9 +111,9 @@ export default async function AboutPage({
       </section>
 
       {/* Brussels Section */}
-      <section className="bg-gray-50 py-20">
+      <section className="section-with-noise bg-section-bg py-20">
         <div className="mx-auto max-w-4xl px-4">
-          <h2 className="mb-6 text-3xl font-bold text-[#1e3a5f]">
+          <h2 className="mb-6 text-3xl font-bold text-primary">
             {dict.about.brussels.title}
           </h2>
           <p className="text-lg leading-relaxed text-gray-600">

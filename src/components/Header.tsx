@@ -17,17 +17,18 @@ export default function Header({ dict, locale }: HeaderProps) {
   const navLinks = [
     { href: `/${locale}`, label: dict.nav.home },
     { href: `/${locale}/services`, label: dict.nav.services },
+    { href: `/${locale}/blog`, label: dict.nav.blog },
     { href: `/${locale}/about`, label: dict.nav.about },
     { href: `/${locale}/contact`, label: dict.nav.contact },
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm">
+    <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href={`/${locale}`} className="flex items-center gap-2.5 text-xl font-bold text-navy">
-            <Image src="/logo.svg" alt="Shady AS logo" width={36} height={24} />
+            <Image src="/logo.svg" alt="Shady AS logo" width={24} height={24} />
             Shady AS
           </Link>
 
@@ -52,7 +53,7 @@ export default function Header({ dict, locale }: HeaderProps) {
           {/* Mobile Menu Button */}
           <button
             type="button"
-            className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100"
+            className="md:hidden inline-flex items-center justify-center p-2 text-gray-700 hover:bg-gray-100"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >

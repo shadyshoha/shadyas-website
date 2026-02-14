@@ -10,6 +10,7 @@ export default function Footer({ dict, locale }: FooterProps) {
   const quickLinks = [
     { href: `/${locale}`, label: dict.nav.home },
     { href: `/${locale}/services`, label: dict.nav.services },
+    { href: `/${locale}/blog`, label: dict.nav.blog },
     { href: `/${locale}/about`, label: dict.nav.about },
     { href: `/${locale}/contact`, label: dict.nav.contact },
   ];

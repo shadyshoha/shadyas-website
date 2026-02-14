@@ -2,6 +2,7 @@
   "nav": {
     "home": "Accueil",
     "services": "Services",
+    "blog": "Blog",
     "about": "À propos",
     "contact": "Contact"
   },
@@ -66,6 +67,32 @@
       "value": "Bruxelles",
       "label": "Basé en Belgique"
     }
+  },
+  "faq": {
+    "title": "Questions Fréquemment Posées",
+    "subtitle": "Trouvez les réponses aux questions les plus courantes sur nos services",
+    "items": [
+      {
+        "question": "Avec quels secteurs travaillez-vous ?",
+        "answer": "Nous travaillons avec des entreprises de divers secteurs, notamment la finance, la santé, le commerce de détail, la logistique et le secteur public. Nos solutions sont adaptées aux besoins réglementaires et opérationnels spécifiques de chaque secteur."
+      },
+      {
+        "question": "Comment se déroule le début d'une collaboration ?",
+        "answer": "Nous commençons par une consultation gratuite pour comprendre vos objectifs d'entreprise et votre paysage IT actuel. Ensuite, nous proposons un plan sur mesure avec des jalons, des délais et des livrables clairs."
+      },
+      {
+        "question": "Offrez-vous un support continu après la livraison d'un projet ?",
+        "answer": "Oui. Nous proposons des services managés et des forfaits de support IT pour garantir que vos systèmes restent sécurisés, à jour et fonctionnent de manière optimale bien après la fin du projet initial."
+      },
+      {
+        "question": "Pouvez-vous travailler avec notre équipe IT existante ?",
+        "answer": "Absolument. Nous collaborons fréquemment avec les équipes IT internes, apportant une expertise spécialisée pour compléter leurs capacités existantes sans perturber les flux de travail."
+      },
+      {
+        "question": "Vos services sont-ils disponibles en dehors de la Belgique ?",
+        "answer": "Oui. Bien que nous soyons basés à Bruxelles, nous servons des clients dans toute l'Union européenne et pouvons travailler à distance ou sur site selon vos besoins."
+      }
+    ]
   },
   "cta": {
     "title": "Prêt à Transformer Votre IT ?",
@@ -139,7 +166,19 @@
     "contact": {
       "title": "Contactez-nous",
       "description": "Contactez Shady AS SRL pour du conseil IT \u00e0 Bruxelles. Boulevard du Souverain 25, 1170 Bruxelles. Email : contact@shadyas.com. Lun\u2013Ven 9h\u201318h."
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "Conseils, guides et bonnes pratiques en conseil IT, cloud, cybers\u00e9curit\u00e9 et transformation digitale par Shady AS SRL \u00e0 Bruxelles."
     }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Conseils et bonnes pratiques de nos experts IT",
+    "readMore": "Lire l\u2019article",
+    "backToBlog": "Retour au blog",
+    "minRead": "min de lecture",
+    "publishedOn": "Publi\u00e9 le"
   },
   "footer": {
     "description": "Conseil et solutions IT bas\u00e9s \u00e0 Bruxelles. Aider les entreprises \u00e0 prosp\u00e9rer \u00e0 l'\u00e8re du num\u00e9rique.",

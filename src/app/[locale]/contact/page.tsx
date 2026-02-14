@@ -41,12 +41,7 @@ export default async function ContactPage({
   return (
     <div>
       {/* Page Header */}
-      <section
-        className="py-20 text-center text-white"
-        style={{
-          background: "linear-gradient(135deg, #1e3a5f 0%, #2d5a8e 100%)",
-        }}
-      >
+      <section className="hero-gradient py-20 text-center text-white">
         <div className="mx-auto max-w-4xl px-4">
           <h1 className="text-4xl font-bold md:text-5xl">
             {dict.contact.title}
@@ -58,17 +53,17 @@ export default async function ContactPage({
       </section>
 
       {/* Contact Info - Centered Layout */}
-      <section className="bg-gray-50 py-20">
+      <section className="section-with-noise bg-section-bg py-20">
         <div className="mx-auto max-w-2xl px-4">
-          <div className="rounded-2xl border border-gray-100 bg-white p-10 shadow-sm">
-            <h2 className="mb-8 text-center text-2xl font-bold text-[#1e3a5f]">
+          <div className="border border-gray-200 bg-white p-10">
+            <h2 className="mb-8 text-center text-2xl font-bold text-primary">
               {dict.contact.info.title}
             </h2>
             <div className="space-y-6">
               <div className="flex items-start gap-4">
                 <span className="mt-0.5 text-2xl">{"\u{1F4CD}"}</span>
                 <div>
-                  <p className="font-semibold text-[#1e3a5f]">
+                  <p className="font-semibold text-primary">
                     {dict.contact.info.addressLabel}
                   </p>
                   <p className="text-gray-600">{dict.contact.info.address}</p>
@@ -77,12 +72,12 @@ export default async function ContactPage({
               <div className="flex items-start gap-4">
                 <span className="mt-0.5 text-2xl">{"\u{1F4E7}"}</span>
                 <div>
-                  <p className="font-semibold text-[#1e3a5f]">
+                  <p className="font-semibold text-primary">
                     {dict.contact.info.emailLabel}
                   </p>
                   <a
                     href="mailto:contact@shadyas.com"
-                    className="text-[#3b82f6] hover:underline"
+                    className="text-accent-light hover:underline"
                   >
                     {dict.contact.info.email}
                   </a>
@@ -91,7 +86,7 @@ export default async function ContactPage({
               <div className="flex items-start gap-4">
                 <span className="mt-0.5 text-2xl">{"\u{1F550}"}</span>
                 <div>
-                  <p className="font-semibold text-[#1e3a5f]">
+                  <p className="font-semibold text-primary">
                     {dict.contact.info.hours}
                   </p>
                   <p className="text-gray-600">
@@ -103,7 +98,7 @@ export default async function ContactPage({
             <div className="mt-10 text-center">
               <Link
                 href="mailto:contact@shadyas.com"
-                className="inline-block bg-[#3b82f6] text-white font-semibold px-8 py-3.5 rounded-lg hover:bg-[#2563eb] transition-colors"
+                className="inline-block bg-accent text-white font-semibold px-8 py-3.5 hover:bg-accent-hover transition-colors"
               >
                 {dict.contact.info.emailCta}
               </Link>

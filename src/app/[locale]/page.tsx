@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getDictionary } from "@/i18n/getDictionary";
 import { Locale, i18n } from "@/i18n/config";
 import Link from "next/link";
+import FaqAccordion from "@/components/FaqAccordion";
 
 const BASE_URL = "https://www.shadyas.com";
 
@@ -49,15 +50,27 @@ export default async function Home({
   const { locale } = await params;
   const dict = await getDictionary(locale);
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: dict.faq.items.map((item: { question: string; answer: string }) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       {/* Hero Section */}
-      <section
-        className="w-full py-24 px-6 md:py-32 text-center text-white"
-        style={{
-          background: "linear-gradient(135deg, #1e3a5f 0%, #2d5a8e 100%)",
-        }}
-      >
+      <section className="hero-gradient w-full py-24 px-6 md:py-32 text-center text-white">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             {dict.hero.title}
@@ -68,13 +81,13 @@ export default async function Home({
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href={`/${locale}/contact`}
-              className="inline-block bg-white text-[#1e3a5f] font-semibold px-8 py-3.5 rounded-lg hover:bg-gray-100 transition-colors"
+              className="inline-block bg-white text-primary font-semibold px-8 py-3.5 hover:bg-gray-100 transition-colors"
             >
               {dict.hero.cta}
             </Link>
             <Link
               href={`/${locale}/services`}
-              className="inline-block border-2 border-white text-white font-semibold px-8 py-3.5 rounded-lg hover:bg-white/10 transition-colors"
+              className="inline-block border-2 border-white text-white font-semibold px-8 py-3.5 hover:bg-white/10 transition-colors"
             >
               {dict.hero.learnMore}
             </Link>
@@ -83,7 +96,7 @@ export default async function Home({
       </section>
 
       {/* Services Overview Section */}
-      <section className="w-full py-20 px-6 bg-gray-50">
+      <section className="section-with-noise w-full py-20 px-6 bg-section-bg">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -97,7 +110,7 @@ export default async function Home({
             {serviceKeys.map(({ key, icon }) => (
               <div
                 key={key}
-                className="bg-white rounded-xl shadow-md p-8 hover:shadow-lg transition-shadow"
+                className="bg-white border border-gray-200 p-8 hover:border-gray-300 transition-colors"
               >
                 <div className="text-4xl mb-4">{icon}</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
@@ -112,7 +125,7 @@ export default async function Home({
           <div className="text-center mt-12">
             <Link
               href={`/${locale}/services`}
-              className="inline-block bg-[#3b82f6] text-white font-semibold px-8 py-3.5 rounded-lg hover:bg-[#2563eb] transition-colors"
+              className="inline-block bg-accent text-white font-semibold px-8 py-3.5 hover:bg-accent-hover transition-colors"
             >
               {dict.hero.learnMore}
             </Link>
@@ -134,7 +147,7 @@ export default async function Home({
           <div className="grid grid-cols-3 md:grid-cols-3 gap-8">
             {statKeys.map((key) => (
               <div key={key} className="text-center p-6">
-                <div className="text-4xl md:text-5xl font-bold text-[#3b82f6] mb-2">
+                <div className="text-4xl md:text-5xl font-bold text-accent mb-2">
                   {dict.whyUs[key].value}
                 </div>
                 <div className="text-gray-600 font-medium">
@@ -146,13 +159,23 @@ export default async function Home({
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="section-with-noise w-full py-20 px-6 bg-section-bg">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              {dict.faq.title}
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              {dict.faq.subtitle}
+            </p>
+          </div>
+          <FaqAccordion items={dict.faq.items} />
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section
-        className="w-full py-20 px-6 text-center text-white"
-        style={{
-          background: "linear-gradient(135deg, #1e3a5f 0%, #2d5a8e 100%)",
-        }}
-      >
+      <section className="hero-gradient w-full py-20 px-6 text-center text-white">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             {dict.cta.title}
@@ -162,7 +185,7 @@ export default async function Home({
           </p>
           <Link
             href={`/${locale}/contact`}
-            className="inline-block bg-white text-[#1e3a5f] font-semibold px-8 py-3.5 rounded-lg hover:bg-gray-100 transition-colors"
+            className="inline-block bg-white text-primary font-semibold px-8 py-3.5 hover:bg-gray-100 transition-colors"
           >
             {dict.cta.button}
           </Link>

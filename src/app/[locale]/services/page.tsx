@@ -50,12 +50,7 @@ export default async function ServicesPage({
   return (
     <div>
       {/* Page Header */}
-      <section
-        className="py-20 text-center text-white"
-        style={{
-          background: "linear-gradient(135deg, #1e3a5f 0%, #2d5a8e 100%)",
-        }}
-      >
+      <section className="hero-gradient py-20 text-center text-white">
         <div className="mx-auto max-w-4xl px-4">
           <h1 className="text-4xl font-bold md:text-5xl">
             {dict.services.title}
@@ -67,7 +62,7 @@ export default async function ServicesPage({
       </section>
 
       {/* Service Sections */}
-      <section className="bg-gray-50 py-20">
+      <section className="section-with-noise bg-section-bg py-20">
         <div className="mx-auto max-w-6xl px-4">
           <div className="grid gap-10 md:grid-cols-2">
             {serviceKeys.map(({ key, icon }) => {
@@ -75,10 +70,10 @@ export default async function ServicesPage({
               return (
                 <div
                   key={key}
-                  className="rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition-shadow hover:shadow-md"
+                  className="border border-gray-200 bg-white p-8 hover:border-gray-300 transition-colors"
                 >
                   <div className="mb-4 text-4xl">{icon}</div>
-                  <h2 className="mb-3 text-2xl font-bold text-[#1e3a5f]">
+                  <h2 className="mb-3 text-2xl font-bold text-primary">
                     {service.title}
                   </h2>
                   <p className="mb-6 leading-relaxed text-gray-600">
@@ -88,7 +83,7 @@ export default async function ServicesPage({
                     {service.features.map((feature: string, i: number) => (
                       <li key={i} className="flex items-start gap-2 text-gray-700">
                         <svg
-                          className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#3b82f6]"
+                          className="mt-0.5 h-5 w-5 flex-shrink-0 text-accent-light"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -114,13 +109,13 @@ export default async function ServicesPage({
       {/* CTA Section */}
       <section className="bg-white py-20">
         <div className="mx-auto max-w-3xl px-4 text-center">
-          <h2 className="text-3xl font-bold text-[#1e3a5f] md:text-4xl">
+          <h2 className="text-3xl font-bold text-primary md:text-4xl">
             {dict.cta.title}
           </h2>
           <p className="mt-4 text-lg text-gray-600">{dict.cta.subtitle}</p>
           <Link
             href={`/${locale}/contact`}
-            className="mt-8 inline-block rounded-lg bg-[#3b82f6] px-8 py-3 text-lg font-semibold text-white transition-colors hover:bg-[#2563eb]"
+            className="mt-8 inline-block bg-accent px-8 py-3 text-lg font-semibold text-white transition-colors hover:bg-accent-hover"
           >
             {dict.cta.button}
           </Link>
