@@ -1,5 +1,10 @@
-import { Inter } from "next/font/google";
-import type { Metadata } from "next";
+import {
+  IBM_Plex_Mono,
+  IBM_Plex_Sans,
+  IBM_Plex_Serif,
+  Instrument_Serif,
+} from "next/font/google";
+import type { Metadata, Viewport } from "next";
 import { getDictionary } from "@/i18n/getDictionary";
 import type { Locale } from "@/i18n/config";
 import { i18n } from "@/i18n/config";
@@ -7,10 +12,43 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "../globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const plexSans = IBM_Plex_Sans({
+  variable: "--font-plex-sans",
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
 });
+
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-instrument-serif",
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+});
+
+const plexSerif = IBM_Plex_Serif({
+  variable: "--font-plex-serif",
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+});
+
+const plexMono = IBM_Plex_Mono({
+  variable: "--font-plex-mono",
+  subsets: ["latin"],
+  weight: ["400", "500"],
+});
+
+const fontVariables = [plexSans, instrumentSerif, plexSerif, plexMono]
+  .map((font) => font.variable)
+  .join(" ");
+
+export const viewport: Viewport = {
+  colorScheme: "light dark",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f3f5f7" },
+    { media: "(prefers-color-scheme: dark)", color: "#0e0e0e" },
+  ],
+};
 
 const BASE_URL = "https://www.shadyas.com";
 
@@ -139,12 +177,14 @@ export default async function LocaleLayout({
   const dict = await getDictionary(locale as Locale);
 
   return (
-    <html lang={locale}>
-      <body className={`${inter.variable} font-sans antialiased`}>
+    <html lang={locale} className={fontVariables}>
+      <body>
         <JsonLd />
-        <Header dict={dict} locale={locale} />
-        <main className="min-h-screen">{children}</main>
-        <Footer dict={dict} locale={locale} />
+        <div className="page">
+          <Header dict={dict} locale={locale} />
+          <main>{children}</main>
+          <Footer dict={dict} locale={locale} />
+        </div>
       </body>
     </html>
   );

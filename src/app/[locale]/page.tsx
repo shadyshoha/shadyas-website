@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { getDictionary } from "@/i18n/getDictionary";
 import { Locale, i18n } from "@/i18n/config";
+import { formatShortDate, getNumberedArticles } from "@/data/blog";
 import Link from "next/link";
+import CtaSection from "@/components/CtaSection";
 import FaqAccordion from "@/components/FaqAccordion";
 
 const BASE_URL = "https://www.shadyas.com";
@@ -32,13 +34,13 @@ export async function generateMetadata({
 }
 
 const serviceKeys = [
-  { key: "strategy" as const, icon: "\u{1F4A1}" },
-  { key: "cloud" as const, icon: "\u2601\uFE0F" },
-  { key: "security" as const, icon: "\u{1F6E1}\uFE0F" },
-  { key: "development" as const, icon: "\u{1F4BB}" },
-  { key: "data" as const, icon: "\u{1F4CA}" },
-  { key: "support" as const, icon: "\u{1F3A7}" },
-];
+  "strategy",
+  "cloud",
+  "security",
+  "development",
+  "data",
+  "support",
+] as const;
 
 const statKeys = ["experience", "clients", "location"] as const;
 
@@ -49,6 +51,8 @@ export default async function Home({
 }) {
   const { locale } = await params;
   const dict = await getDictionary(locale);
+  const allArticles = getNumberedArticles();
+  const latestArticles = allArticles.slice(0, 5);
 
   const faqJsonLd = {
     "@context": "https://schema.org",
@@ -64,133 +68,116 @@ export default async function Home({
   };
 
   return (
-    <main>
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      {/* Hero Section */}
-      <section className="hero-gradient w-full py-24 px-6 md:py-32 text-center text-white">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            {dict.hero.title}
-          </h1>
-          <p className="text-lg md:text-xl text-white/85 mb-10 max-w-2xl mx-auto leading-relaxed">
-            {dict.hero.subtitle}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href={`/${locale}/contact`}
-              className="inline-block bg-white text-primary font-semibold px-8 py-3.5 hover:bg-gray-100 transition-colors"
-            >
-              {dict.hero.cta}
+
+      {/* Hero */}
+      <section className="grid-12 hero">
+        <h1 className="display">{dict.hero.title}</h1>
+        <p className="intro">{dict.hero.subtitle}</p>
+        <div className="aside-links">
+          <Link href={`/${locale}/contact`} className="status-pill">
+            <span className="status-dot" aria-hidden="true" />
+            {dict.hero.pill}
+          </Link>
+          <div className="mono-links">
+            <Link href={`/${locale}/contact`}>
+              {dict.hero.cta} <span aria-hidden="true">→</span>
             </Link>
-            <Link
-              href={`/${locale}/services`}
-              className="inline-block border-2 border-white text-white font-semibold px-8 py-3.5 hover:bg-white/10 transition-colors"
-            >
-              {dict.hero.learnMore}
+            <Link href={`/${locale}/services`}>
+              {dict.hero.learnMore} <span aria-hidden="true">→</span>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Services Overview Section */}
-      <section className="section-with-noise w-full py-20 px-6 bg-section-bg">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              {dict.services.title}
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              {dict.services.subtitle}
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {serviceKeys.map(({ key, icon }) => (
-              <div
-                key={key}
-                className="bg-white border border-gray-200 p-8 hover:border-gray-300 transition-colors"
+      {/* Latest writing */}
+      <section className="section">
+        <div className="row row-head essay-row" aria-hidden="true">
+          <span>{dict.home.colNo}</span>
+          <span>{dict.home.writing}</span>
+          <span className="col-read">{dict.home.colRead}</span>
+          <span className="col-end">{dict.home.colDate}</span>
+        </div>
+        <ul aria-label={dict.home.writing}>
+          {latestArticles.map((article) => (
+            <li key={article.slug}>
+              <Link
+                href={`/${locale}/blog/${article.slug}`}
+                className="row essay-row"
               >
-                <div className="text-4xl mb-4">{icon}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  {dict.services[key].title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {dict.services[key].short}
-                </p>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <Link
-              href={`/${locale}/services`}
-              className="inline-block bg-accent text-white font-semibold px-8 py-3.5 hover:bg-accent-hover transition-colors"
-            >
-              {dict.hero.learnMore}
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us Section */}
-      <section className="w-full py-20 px-6 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              {dict.whyUs.title}
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              {dict.whyUs.subtitle}
-            </p>
-          </div>
-          <div className="grid grid-cols-3 md:grid-cols-3 gap-8">
-            {statKeys.map((key) => (
-              <div key={key} className="text-center p-6">
-                <div className="text-4xl md:text-5xl font-bold text-accent mb-2">
-                  {dict.whyUs[key].value}
-                </div>
-                <div className="text-gray-600 font-medium">
-                  {dict.whyUs[key].label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="section-with-noise w-full py-20 px-6 bg-section-bg">
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              {dict.faq.title}
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              {dict.faq.subtitle}
-            </p>
-          </div>
-          <FaqAccordion items={dict.faq.items} />
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="hero-gradient w-full py-20 px-6 text-center text-white">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            {dict.cta.title}
-          </h2>
-          <p className="text-lg text-white/85 mb-8 max-w-xl mx-auto leading-relaxed">
-            {dict.cta.subtitle}
-          </p>
-          <Link
-            href={`/${locale}/contact`}
-            className="inline-block bg-white text-primary font-semibold px-8 py-3.5 hover:bg-gray-100 transition-colors"
-          >
-            {dict.cta.button}
+                <span>{article.no}</span>
+                <span className="col-title">{article.title[locale]}</span>
+                <span className="col-read">{article.readTime} min</span>
+                <time className="col-end" dateTime={article.date}>
+                  {formatShortDate(article.date, locale)}
+                </time>
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <div className="table-foot mono-links">
+          <Link href={`/${locale}/blog`}>
+            {dict.home.allArticles} ({allArticles.length}){" "}
+            <span aria-hidden="true">→</span>
           </Link>
         </div>
       </section>
-    </main>
+
+      {/* Services overview */}
+      <section className="section">
+        <div className="section-head">
+          <h2 className="section-title">{dict.services.title}</h2>
+          <p className="section-sub">{dict.services.subtitle}</p>
+        </div>
+        <div className="cards">
+          {serviceKeys.map((key, index) => (
+            <div key={key} className="card">
+              <p className="eyebrow">{String(index + 1).padStart(2, "0")}</p>
+              <h3 className="card-title">{dict.services[key].title}</h3>
+              <p className="card-text">{dict.services[key].short}</p>
+              <p className="card-note">
+                {dict.services[key].features.join(" · ")}
+              </p>
+            </div>
+          ))}
+        </div>
+        <div className="table-foot mono-links">
+          <Link href={`/${locale}/services`}>
+            {dict.hero.learnMore} <span aria-hidden="true">→</span>
+          </Link>
+        </div>
+      </section>
+
+      {/* Why choose us */}
+      <section className="section">
+        <div className="section-head">
+          <h2 className="section-title">{dict.whyUs.title}</h2>
+          <p className="section-sub">{dict.whyUs.subtitle}</p>
+        </div>
+        <div className="figures">
+          {statKeys.map((key) => (
+            <div key={key} className="figure">
+              <div className="figure-value">{dict.whyUs[key].value}</div>
+              <div className="eyebrow">{dict.whyUs[key].label}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="section">
+        <div className="section-head">
+          <h2 className="section-title">{dict.faq.title}</h2>
+          <p className="section-sub">{dict.faq.subtitle}</p>
+        </div>
+        <FaqAccordion items={dict.faq.items} />
+      </section>
+
+      <CtaSection dict={dict} locale={locale} />
+    </>
   );
 }

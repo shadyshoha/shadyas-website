@@ -6,11 +6,23 @@
     "about": "About",
     "contact": "Contact"
   },
+  "strip": {
+    "role": "IT Consulting",
+    "city": "Brussels"
+  },
   "hero": {
-    "title": "Your Trusted IT Partner in Brussels",
+    "title": "Where IT is heading, and how to get your business there.",
     "subtitle": "Shady AS SRL delivers innovative IT consulting solutions to help your business thrive in the digital age.",
     "cta": "Get in Touch",
-    "learnMore": "Our Services"
+    "learnMore": "Our Services",
+    "pill": "Free first consultation"
+  },
+  "home": {
+    "writing": "Writing",
+    "allArticles": "All articles",
+    "colNo": "No.",
+    "colRead": "Read",
+    "colDate": "Date"
   },
   "services": {
     "title": "Our Services",

@@ -73,75 +73,59 @@ export default async function BlogArticlePage({
   };
 
   return (
-    <div>
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Article Header */}
-      <section className="hero-gradient py-20 text-center text-white">
-        <div className="mx-auto max-w-3xl px-4">
-          <div className="mb-4 flex items-center justify-center gap-3 text-sm text-blue-100">
+      <article className="grid-12 article-grid">
+        {/* Article Meta */}
+        <aside className="article-meta">
+          <div>
+            <span>{dict.blog.publishedOn}</span>
             <time dateTime={article.date}>
-              {dict.blog.publishedOn} {formatDate(article.date, locale)}
+              {formatDate(article.date, locale)}
             </time>
-            <span aria-hidden="true">&middot;</span>
+          </div>
+          <div>
+            <span>{dict.home.colRead}</span>
             <span>
               {article.readTime} {dict.blog.minRead}
             </span>
           </div>
-          <h1 className="text-3xl font-bold md:text-4xl lg:text-5xl leading-tight">
-            {article.title[locale]}
-          </h1>
-        </div>
-      </section>
+          <Link href={`/${locale}/blog`}>
+            <span aria-hidden="true">←</span> {dict.blog.backToBlog}
+          </Link>
+        </aside>
 
-      {/* Article Body */}
-      <section className="bg-white py-16">
-        <article className="mx-auto max-w-3xl px-4">
-          {sections.map((section, i) => (
-            <div key={i} className={i > 0 ? "mt-10" : ""}>
-              {section.heading && (
-                <h2 className="mb-4 text-2xl font-bold text-primary">
-                  {section.heading}
-                </h2>
-              )}
-              {section.paragraphs.map((paragraph, j) => (
-                <p
-                  key={j}
-                  className="mb-4 text-lg leading-relaxed text-gray-700"
-                >
-                  {paragraph}
-                </p>
-              ))}
-            </div>
-          ))}
+        <div className="article">
+          {/* Article Header */}
+          <h1 className="article-title">{article.title[locale]}</h1>
+          <p className="article-dek">{article.excerpt[locale]}</p>
+          <hr />
+
+          {/* Article Body */}
+          <div className="prose">
+            {sections.map((section, i) => (
+              <section key={i}>
+                {section.heading && <h2>{section.heading}</h2>}
+                {section.paragraphs.map((paragraph, j) => (
+                  <p key={j}>{paragraph}</p>
+                ))}
+              </section>
+            ))}
+          </div>
 
           {/* Back to blog */}
-          <div className="mt-12 pt-8 border-t border-gray-200">
-            <Link
-              href={`/${locale}/blog`}
-              className="inline-flex items-center gap-2 text-sm font-semibold text-accent-light hover:text-accent-hover transition-colors"
-            >
-              <svg
-                className="h-4 w-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={2}
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
-                />
-              </svg>
-              {dict.blog.backToBlog}
+          <div className="signoff">
+            <Link href={`/${locale}/blog`}>
+              <span aria-hidden="true">←</span> {dict.blog.backToBlog}
             </Link>
+            <span>Shady AS SRL</span>
           </div>
-        </article>
-      </section>
-    </div>
+        </div>
+      </article>
+    </>
   );
 }
