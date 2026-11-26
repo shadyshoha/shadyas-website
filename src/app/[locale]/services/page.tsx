@@ -68,7 +68,7 @@ export default async function ServicesPage({
               <h2 className="service-title">{service.title}</h2>
               <div className="service-body">
                 <p className="service-text">{service.description}</p>
-                <ul className="mono feature-list">
+                <ul className="feature-list">
                   {service.features.map((feature: string) => (
                     <li key={feature}>{feature}</li>
                   ))}
