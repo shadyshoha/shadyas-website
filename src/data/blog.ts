@@ -3567,6 +3567,621 @@ export const blogArticles: BlogArticle[] = [
         ],
     },
   },
+  {
+    slug: "cyber-resilience-act-reporting-obligations",
+    date: "2026-11-26",
+    readTime: 7,
+    title: {
+      en: "Cyber Resilience Act: the reporting obligations are live. What manufacturers must do now",
+      fr: "Cyber Resilience Act : les obligations de signalement sont en vigueur. Ce que les fabricants doivent faire",
+      nl: "Cyber Resilience Act: de meldplicht is van kracht. Wat fabrikanten nu moeten doen",
+    },
+    excerpt: {
+      en: "Since 11 September 2026, manufacturers of software and connected products sold in the EU must report actively exploited vulnerabilities and severe incidents within 24 hours through ENISA's Single Reporting Platform. The rest of the Cyber Resilience Act follows on 11 December 2027. A practical guide to who is concerned, the deadlines, and how to prepare.",
+      fr: "Depuis le 11 septembre 2026, les fabricants de logiciels et de produits connectés vendus dans l'UE doivent signaler sous 24 heures les vulnérabilités activement exploitées et les incidents graves via la plateforme de signalement unique de l'ENISA. Le reste du Cyber Resilience Act suivra le 11 décembre 2027. Un guide pratique : qui est concerné, quels délais, comment se préparer.",
+      nl: "Sinds 11 september 2026 moeten fabrikanten van software en verbonden producten die in de EU worden verkocht actief uitgebuite kwetsbaarheden en ernstige incidenten binnen 24 uur melden via het centrale meldplatform van ENISA. De rest van de Cyber Resilience Act volgt op 11 december 2027. Een praktische gids: wie valt eronder, welke termijnen gelden en hoe bereidt u zich voor.",
+    },
+    content: {
+      en: [
+        {
+          paragraphs: [
+            "On 11 September 2026 the first operative part of the EU Cyber Resilience Act (CRA) started to apply. From that date, manufacturers of products with digital elements must report actively exploited vulnerabilities and severe incidents to the authorities, on deadlines counted in hours. ENISA, the EU's cybersecurity agency, opened its Single Reporting Platform the same day.",
+            "The rest of the regulation, including security-by-design requirements and CE marking, follows on 11 December 2027. But the reporting duty is not a rehearsal: it is binding now, it covers products you have already sold, and it requires a process that most product teams do not yet have. Here is what it involves.",
+          ],
+        },
+        {
+          heading: "Who is concerned",
+          paragraphs: [
+            "The CRA applies to products with digital elements made available on the EU market: hardware and software whose intended use includes a connection to a device or network. That covers connected devices and their firmware, operating systems, desktop and mobile applications, and standalone software sold commercially, together with the remote data processing a product needs to function. The obligations fall on the manufacturer, wherever it is based, with related duties for importers and distributors.",
+            "Some categories are outside the scope because they have their own rules, including medical devices, motor vehicles, civil aviation and marine equipment. Open-source software developed outside a commercial activity is excluded, and open-source stewards get a lighter regime whose reporting duty only starts in December 2027. Pure software-as-a-service is generally not a product under the CRA unless it is the remote data processing part of one; many SaaS providers are covered by NIS2 instead.",
+            "One point surprises many teams: the reporting obligation is not limited to new products. According to ENISA's guidance, it applies to all products in scope, including those placed on the market before December 2027. If you still have products in the field, you are concerned.",
+          ],
+        },
+        {
+          heading: "What must be reported, and how fast",
+          paragraphs: [
+            "Two kinds of event trigger a report. The first is an actively exploited vulnerability: there is reliable evidence that a malicious actor has exploited a flaw in your product in a system without the owner's permission. A vulnerability found in testing, or a zero-day with no evidence of exploitation, does not trigger the duty on that basis alone. The second is a severe incident that affects, or could affect, your product's ability to protect the availability, authenticity, integrity or confidentiality of data or functions, for example a compromised update channel.",
+            "The timeline has three steps. An early warning is due without undue delay and in any case within 24 hours of becoming aware. A fuller notification follows within 72 hours, with general information about the product, an initial assessment and the measures taken or recommended. A final report is due no later than 14 days after a corrective or mitigating measure is available for a vulnerability, or within one month of the 72-hour notification for a severe incident.",
+            "The clock starts when the manufacturer becomes aware, which Commission guidance describes as reaching a reasonable degree of certainty after an initial assessment. Exploitation that you already knew about before 11 September 2026 does not have to be reported retrospectively. Exploitation you discover after that date does, even if the vulnerability itself is old.",
+          ],
+        },
+        {
+          heading: "How reporting works",
+          paragraphs: [
+            "All mandatory notifications go through ENISA's Single Reporting Platform. A manufacturer nominates an assigned representative, who signs in with an EU Login account protected by multi-factor authentication. The report is addressed to the national CSIRT designated as coordinator in the Member State where the manufacturer has its main establishment, and ENISA receives it at the same time. That CSIRT forwards it to its counterparts in the other countries concerned.",
+            "Manufacturers without an establishment in the EU are not exempt. The competent CSIRT is then determined in order by where their authorised representative, their importer or their distributor operates, and failing that by where most of their users are. At launch the platform was available in English only and had no API, so reports are entered by hand; if the platform is unavailable, you contact the CSIRT directly and file through the platform afterwards.",
+            "Reporting to the authorities is only half of the duty. Manufacturers must also inform the users affected, and where appropriate all users, about the vulnerability or incident and about the measures they can take. If a manufacturer does not do so in a timely manner, the CSIRT may inform users itself.",
+          ],
+        },
+        {
+          heading: "What follows in December 2027",
+          paragraphs: [
+            "From 11 December 2027 the main obligations apply to products placed on the market. Products must be designed, developed and produced to meet essential cybersecurity requirements, and shipped without known exploitable vulnerabilities and with secure default settings. Manufacturers must handle vulnerabilities and provide security updates throughout a support period that is in principle at least five years, keep a software bill of materials, draw up technical documentation and carry out a conformity assessment before affixing the CE marking. Products classed as important or critical face stricter assessment.",
+            "The penalties are substantial. Failing to meet the essential requirements or the manufacturer's obligations, including the reporting duties, can lead to fines of up to EUR 15 million or 2.5% of worldwide annual turnover, whichever is higher. Micro and small enterprises are not fined for missing the 24-hour early warning deadline, but the obligation to report still applies to them.",
+          ],
+        },
+        {
+          heading: "CRA and NIS2: two different duties",
+          paragraphs: [
+            "The CRA is often confused with NIS2. They are separate. NIS2 applies to organisations in designated sectors and concerns the security of their own networks and the incidents that hit them. The CRA applies to products and concerns the vulnerabilities in what you sell. A software company can be subject to both: as an entity under NIS2, and as a manufacturer under the CRA. The two reports go through different channels and have different content, so the processes need to be designed together.",
+          ],
+        },
+        {
+          heading: "A preparation checklist",
+          paragraphs: [
+            "Map your products. List every product with digital elements you make available in the EU, including those no longer sold but still in use, and decide which are in scope. Record the components and suppliers each one depends on; a software bill of materials started now also serves the 2027 requirements.",
+            "Define who decides. A 24-hour deadline leaves no time to work out responsibilities during an event. Name the people who assess whether a vulnerability is actively exploited or an incident is severe, define when awareness begins, and make sure security signals from customers, researchers, threat intelligence and telemetry reach them quickly.",
+            "Prepare the mechanics. Identify your coordinator CSIRT, nominate an assigned representative with an EU Login account, and prepare templates for the early warning, the 72-hour notification and the final report. Build the process for notifying users, and rehearse the whole sequence once before you need it.",
+            "Review your contracts. You depend on suppliers for information about vulnerabilities in their components. Ask them to notify you promptly, and check what your own customer contracts say about security communication. As always, this article is an overview rather than legal advice; ENISA's FAQ and the Commission's guidance are the reference texts and are updated regularly.",
+          ],
+        },
+        {
+          heading: "How Shady AS can help",
+          paragraphs: [
+            "At Shady AS SRL, our cybersecurity and software development services cover both sides of the CRA: the process and the product. We can help you determine which of your products are in scope, set up vulnerability handling and incident response procedures that meet the 24-hour and 72-hour deadlines, and plan the engineering work needed for December 2027.",
+            "Every engagement starts with a free consultation to understand your goals and your current IT landscape. Contact us to review how ready your product team is.",
+          ],
+        },
+      ],
+      fr: [
+        {
+          paragraphs: [
+            "Le 11 septembre 2026, le premier volet opérationnel du règlement européen sur la cyberrésilience (Cyber Resilience Act, CRA) est devenu applicable. Depuis cette date, les fabricants de produits comportant des éléments numériques doivent signaler aux autorités les vulnérabilités activement exploitées et les incidents graves, dans des délais qui se comptent en heures. L'ENISA, l'agence de l'UE pour la cybersécurité, a ouvert le même jour sa plateforme de signalement unique.",
+            "Le reste du règlement, notamment les exigences de sécurité dès la conception et le marquage CE, suivra le 11 décembre 2027. Mais l'obligation de signalement n'est pas une répétition générale : elle est contraignante dès maintenant, elle couvre des produits que vous avez déjà vendus, et elle exige un processus que la plupart des équipes produit n'ont pas encore. Voici ce qu'elle implique.",
+          ],
+        },
+        {
+          heading: "Qui est concerné",
+          paragraphs: [
+            "Le CRA s'applique aux produits comportant des éléments numériques mis à disposition sur le marché de l'UE : le matériel et les logiciels dont l'utilisation prévue comprend une connexion à un appareil ou à un réseau. Cela couvre les appareils connectés et leur micrologiciel, les systèmes d'exploitation, les applications de bureau et mobiles, et les logiciels autonomes vendus commercialement, ainsi que le traitement de données à distance dont un produit a besoin pour fonctionner. Les obligations pèsent sur le fabricant, où qu'il soit établi, avec des devoirs connexes pour les importateurs et les distributeurs.",
+            "Certaines catégories sont hors champ parce qu'elles ont leurs propres règles, notamment les dispositifs médicaux, les véhicules à moteur, l'aviation civile et les équipements marins. Les logiciels open source développés en dehors d'une activité commerciale sont exclus, et les intendants de logiciels ouverts bénéficient d'un régime allégé dont l'obligation de signalement ne débute qu'en décembre 2027. Le pur logiciel en tant que service (SaaS) n'est en général pas un produit au sens du CRA, sauf s'il constitue la partie traitement à distance d'un produit ; de nombreux fournisseurs SaaS relèvent plutôt de NIS2.",
+            "Un point surprend beaucoup d'équipes : l'obligation de signalement ne se limite pas aux nouveaux produits. Selon les orientations de l'ENISA, elle s'applique à tous les produits entrant dans le champ, y compris ceux mis sur le marché avant décembre 2027. Si vous avez encore des produits en service, vous êtes concerné.",
+          ],
+        },
+        {
+          heading: "Que faut-il signaler, et dans quel délai",
+          paragraphs: [
+            "Deux types d'événements déclenchent un signalement. Le premier est une vulnérabilité activement exploitée : il existe des preuves fiables qu'un acteur malveillant a exploité une faille de votre produit dans un système sans l'autorisation de son propriétaire. Une vulnérabilité découverte lors de tests, ou une faille zero-day sans preuve d'exploitation, ne déclenche pas l'obligation à ce seul titre. Le second est un incident grave qui affecte, ou pourrait affecter, la capacité de votre produit à protéger la disponibilité, l'authenticité, l'intégrité ou la confidentialité des données ou des fonctions, par exemple un canal de mise à jour compromis.",
+            "Le calendrier comporte trois étapes. Une alerte précoce est due sans retard injustifié et en tout état de cause dans les 24 heures suivant la prise de connaissance. Une notification plus complète suit dans les 72 heures, avec des informations générales sur le produit, une première évaluation et les mesures prises ou recommandées. Un rapport final est dû au plus tard 14 jours après la mise à disposition d'une mesure corrective ou d'atténuation pour une vulnérabilité, ou dans le mois qui suit la notification à 72 heures pour un incident grave.",
+            "Le délai court à partir du moment où le fabricant a connaissance de l'événement, ce que les orientations de la Commission décrivent comme l'atteinte d'un degré raisonnable de certitude après une première évaluation. Une exploitation dont vous aviez déjà connaissance avant le 11 septembre 2026 ne doit pas être signalée rétroactivement. Une exploitation que vous découvrez après cette date doit l'être, même si la vulnérabilité elle-même est ancienne.",
+          ],
+        },
+        {
+          heading: "Comment se déroule le signalement",
+          paragraphs: [
+            "Toutes les notifications obligatoires passent par la plateforme de signalement unique de l'ENISA. Le fabricant désigne un représentant, qui se connecte avec un compte EU Login protégé par une authentification multifacteur. Le signalement est adressé au CSIRT national désigné comme coordinateur dans l'État membre où le fabricant a son établissement principal, et l'ENISA le reçoit simultanément. Ce CSIRT le transmet à ses homologues des autres pays concernés.",
+            "Les fabricants sans établissement dans l'UE ne sont pas exemptés. Le CSIRT compétent est alors déterminé, dans l'ordre, selon le lieu où opère leur mandataire, leur importateur ou leur distributeur, et à défaut selon le lieu où se trouvent la plupart de leurs utilisateurs. Au lancement, la plateforme n'était disponible qu'en anglais et ne proposait pas d'API : les signalements sont donc saisis manuellement. Si la plateforme est indisponible, vous contactez directement le CSIRT et vous déposez ensuite le signalement sur la plateforme.",
+            "Le signalement aux autorités n'est que la moitié de l'obligation. Les fabricants doivent aussi informer les utilisateurs touchés, et le cas échéant tous les utilisateurs, de la vulnérabilité ou de l'incident ainsi que des mesures qu'ils peuvent prendre. Si un fabricant ne le fait pas en temps utile, le CSIRT peut informer lui-même les utilisateurs.",
+          ],
+        },
+        {
+          heading: "Ce qui suivra en décembre 2027",
+          paragraphs: [
+            "À partir du 11 décembre 2027, les obligations principales s'appliqueront aux produits mis sur le marché. Les produits devront être conçus, développés et fabriqués de manière à respecter des exigences essentielles de cybersécurité, et livrés sans vulnérabilité exploitable connue et avec une configuration sécurisée par défaut. Les fabricants devront traiter les vulnérabilités et fournir des mises à jour de sécurité pendant une période d'assistance qui est en principe d'au moins cinq ans, tenir une nomenclature logicielle (SBOM), établir une documentation technique et procéder à une évaluation de la conformité avant d'apposer le marquage CE. Les produits classés importants ou critiques sont soumis à une évaluation plus stricte.",
+            "Les sanctions sont lourdes. Le non-respect des exigences essentielles ou des obligations du fabricant, y compris celles de signalement, peut entraîner des amendes allant jusqu'à 15 millions d'euros ou 2,5 % du chiffre d'affaires annuel mondial, le montant le plus élevé étant retenu. Les microentreprises et les petites entreprises ne sont pas sanctionnées pour le dépassement du délai d'alerte précoce de 24 heures, mais l'obligation de signaler s'applique bien à elles.",
+          ],
+        },
+        {
+          heading: "CRA et NIS2 : deux obligations distinctes",
+          paragraphs: [
+            "Le CRA est souvent confondu avec NIS2. Les deux textes sont distincts. NIS2 s'applique aux organisations de secteurs désignés et concerne la sécurité de leurs propres réseaux et les incidents qui les frappent. Le CRA s'applique aux produits et concerne les vulnérabilités de ce que vous vendez. Un éditeur de logiciels peut relever des deux : en tant qu'entité au titre de NIS2, et en tant que fabricant au titre du CRA. Les deux signalements empruntent des canaux différents et n'ont pas le même contenu ; les processus doivent donc être conçus ensemble.",
+          ],
+        },
+        {
+          heading: "Une liste de préparation",
+          paragraphs: [
+            "Cartographiez vos produits. Recensez chaque produit comportant des éléments numériques que vous mettez à disposition dans l'UE, y compris ceux qui ne sont plus vendus mais restent utilisés, et déterminez lesquels entrent dans le champ. Notez les composants et les fournisseurs dont chacun dépend ; une nomenclature logicielle entamée maintenant servira aussi aux exigences de 2027.",
+            "Définissez qui décide. Un délai de 24 heures ne laisse pas le temps de répartir les responsabilités en plein événement. Désignez les personnes qui évaluent si une vulnérabilité est activement exploitée ou si un incident est grave, définissez le moment où la prise de connaissance commence, et veillez à ce que les signaux de sécurité provenant des clients, des chercheurs, du renseignement sur les menaces et de la télémétrie leur parviennent rapidement.",
+            "Préparez la mécanique. Identifiez votre CSIRT coordinateur, désignez un représentant disposant d'un compte EU Login, et préparez des modèles pour l'alerte précoce, la notification à 72 heures et le rapport final. Mettez en place le processus d'information des utilisateurs, et répétez l'ensemble de la séquence une fois avant d'en avoir besoin.",
+            "Revoyez vos contrats. Vous dépendez de vos fournisseurs pour être informé des vulnérabilités de leurs composants. Demandez-leur de vous avertir rapidement, et vérifiez ce que vos propres contrats clients prévoient en matière de communication de sécurité. Comme toujours, cet article est une vue d'ensemble et non un avis juridique ; la FAQ de l'ENISA et les orientations de la Commission sont les textes de référence et sont régulièrement mises à jour.",
+          ],
+        },
+        {
+          heading: "Comment Shady AS peut vous aider",
+          paragraphs: [
+            "Chez Shady AS SRL, nos services de cybersécurité et de développement logiciel couvrent les deux versants du CRA : le processus et le produit. Nous pouvons vous aider à déterminer lesquels de vos produits sont concernés, à mettre en place des procédures de gestion des vulnérabilités et de réponse aux incidents qui respectent les délais de 24 et 72 heures, et à planifier les travaux d'ingénierie nécessaires pour décembre 2027.",
+            "Chaque collaboration commence par une consultation gratuite pour comprendre vos objectifs et votre paysage IT actuel. Contactez-nous pour évaluer le niveau de préparation de votre équipe produit.",
+          ],
+        },
+      ],
+      nl: [
+        {
+          paragraphs: [
+            "Op 11 september 2026 is het eerste operationele deel van de Europese verordening inzake cyberweerbaarheid (Cyber Resilience Act, CRA) van toepassing geworden. Sinds die datum moeten fabrikanten van producten met digitale elementen actief uitgebuite kwetsbaarheden en ernstige incidenten aan de autoriteiten melden, binnen termijnen die in uren worden geteld. ENISA, het EU-agentschap voor cyberbeveiliging, opende dezelfde dag zijn centrale meldplatform.",
+            "De rest van de verordening, met onder meer de eisen rond security by design en de CE-markering, volgt op 11 december 2027. Maar de meldplicht is geen generale repetitie: ze is nu al bindend, ze geldt voor producten die u al verkocht hebt, en ze vraagt een proces dat de meeste productteams nog niet hebben. Dit houdt ze in.",
+          ],
+        },
+        {
+          heading: "Wie valt eronder",
+          paragraphs: [
+            "De CRA is van toepassing op producten met digitale elementen die op de EU-markt worden aangeboden: hardware en software waarvan het beoogde gebruik een verbinding met een apparaat of netwerk omvat. Dat omvat verbonden apparaten en hun firmware, besturingssystemen, desktop- en mobiele applicaties en commercieel verkochte standalone software, samen met de gegevensverwerking op afstand die een product nodig heeft om te werken. De verplichtingen rusten op de fabrikant, waar die ook gevestigd is, met aanverwante plichten voor importeurs en distributeurs.",
+            "Sommige categorieën vallen buiten het toepassingsgebied omdat ze eigen regels hebben, zoals medische hulpmiddelen, motorvoertuigen, burgerluchtvaart en uitrusting van zeeschepen. Opensourcesoftware die buiten een commerciële activiteit wordt ontwikkeld is uitgesloten, en beheerders van opensourcesoftware krijgen een lichter regime waarvan de meldplicht pas in december 2027 ingaat. Zuivere software-as-a-service is doorgaans geen product in de zin van de CRA, tenzij het gaat om het deel gegevensverwerking op afstand van een product; veel SaaS-aanbieders vallen in plaats daarvan onder NIS2.",
+            "Eén punt verrast veel teams: de meldplicht is niet beperkt tot nieuwe producten. Volgens de toelichting van ENISA geldt ze voor alle producten binnen het toepassingsgebied, ook voor producten die vóór december 2027 in de handel zijn gebracht. Hebt u nog producten in gebruik bij klanten, dan valt u eronder.",
+          ],
+        },
+        {
+          heading: "Wat moet u melden, en hoe snel",
+          paragraphs: [
+            "Twee soorten gebeurtenissen leiden tot een melding. De eerste is een actief uitgebuite kwetsbaarheid: er is betrouwbaar bewijs dat een kwaadwillende actor een zwakke plek in uw product heeft misbruikt in een systeem zonder toestemming van de eigenaar. Een kwetsbaarheid die bij tests wordt gevonden, of een zero-day zonder bewijs van misbruik, leidt op die grond alleen niet tot een meldplicht. De tweede is een ernstig incident dat het vermogen van uw product om de beschikbaarheid, authenticiteit, integriteit of vertrouwelijkheid van gegevens of functies te beschermen aantast of kan aantasten, bijvoorbeeld een gecompromitteerd updatekanaal.",
+            "De tijdlijn telt drie stappen. Een vroegtijdige waarschuwing is vereist zonder onnodige vertraging en in elk geval binnen 24 uur nadat u er kennis van hebt gekregen. Een uitgebreidere melding volgt binnen 72 uur, met algemene informatie over het product, een eerste beoordeling en de genomen of aanbevolen maatregelen. Een eindverslag is vereist uiterlijk 14 dagen nadat een corrigerende of beperkende maatregel beschikbaar is voor een kwetsbaarheid, of binnen een maand na de melding van 72 uur voor een ernstig incident.",
+            "De termijn begint te lopen wanneer de fabrikant kennis krijgt van de gebeurtenis, wat de richtsnoeren van de Commissie omschrijven als het bereiken van een redelijke mate van zekerheid na een eerste beoordeling. Misbruik waarvan u al vóór 11 september 2026 op de hoogte was, hoeft niet met terugwerkende kracht te worden gemeld. Misbruik dat u na die datum ontdekt wel, ook als de kwetsbaarheid zelf oud is.",
+          ],
+        },
+        {
+          heading: "Hoe het melden verloopt",
+          paragraphs: [
+            "Alle verplichte meldingen verlopen via het centrale meldplatform van ENISA. Een fabrikant wijst een vertegenwoordiger aan, die inlogt met een EU Login-account dat met multifactorauthenticatie is beveiligd. De melding is gericht aan het nationale CSIRT dat als coördinator is aangewezen in de lidstaat waar de fabrikant zijn hoofdvestiging heeft, en ENISA ontvangt ze tegelijk. Dat CSIRT stuurt ze door naar zijn tegenhangers in de andere betrokken landen.",
+            "Fabrikanten zonder vestiging in de EU zijn niet vrijgesteld. Het bevoegde CSIRT wordt dan achtereenvolgens bepaald door de plaats waar hun gemachtigde, hun importeur of hun distributeur actief is, en bij gebrek daaraan door de plaats waar de meeste van hun gebruikers zich bevinden. Bij de lancering was het platform alleen in het Engels beschikbaar en had het geen API, zodat meldingen handmatig worden ingevoerd; is het platform niet beschikbaar, dan neemt u rechtstreeks contact op met het CSIRT en dient u de melding nadien via het platform in.",
+            "Melden aan de autoriteiten is maar de helft van de plicht. Fabrikanten moeten ook de getroffen gebruikers, en waar passend alle gebruikers, informeren over de kwetsbaarheid of het incident en over de maatregelen die ze kunnen nemen. Doet een fabrikant dat niet tijdig, dan mag het CSIRT de gebruikers zelf informeren.",
+          ],
+        },
+        {
+          heading: "Wat volgt in december 2027",
+          paragraphs: [
+            "Vanaf 11 december 2027 gelden de hoofdverplichtingen voor producten die in de handel worden gebracht. Producten moeten zo worden ontworpen, ontwikkeld en geproduceerd dat ze aan essentiële cyberbeveiligingseisen voldoen, en worden geleverd zonder bekende uitbuitbare kwetsbaarheden en met veilige standaardinstellingen. Fabrikanten moeten kwetsbaarheden afhandelen en beveiligingsupdates leveren gedurende een ondersteuningsperiode die in principe minstens vijf jaar bedraagt, een softwarestuklijst (SBOM) bijhouden, technische documentatie opstellen en een conformiteitsbeoordeling uitvoeren voordat ze de CE-markering aanbrengen. Voor producten die als belangrijk of kritiek zijn ingedeeld, geldt een strengere beoordeling.",
+            "De sancties zijn aanzienlijk. Het niet naleven van de essentiële eisen of van de verplichtingen van de fabrikant, waaronder de meldplicht, kan leiden tot boetes tot 15 miljoen euro of 2,5% van de wereldwijde jaaromzet, afhankelijk van welk bedrag het hoogst is. Micro- en kleine ondernemingen krijgen geen boete voor het overschrijden van de termijn van 24 uur voor de vroegtijdige waarschuwing, maar de meldplicht geldt wel voor hen.",
+          ],
+        },
+        {
+          heading: "CRA en NIS2: twee verschillende plichten",
+          paragraphs: [
+            "De CRA wordt vaak verward met NIS2. Het zijn afzonderlijke regelingen. NIS2 geldt voor organisaties in aangewezen sectoren en gaat over de beveiliging van hun eigen netwerken en de incidenten die hen treffen. De CRA geldt voor producten en gaat over de kwetsbaarheden in wat u verkoopt. Een softwarebedrijf kan onder beide vallen: als entiteit onder NIS2 en als fabrikant onder de CRA. De twee meldingen lopen via verschillende kanalen en hebben een andere inhoud, dus de processen moeten samen worden ontworpen.",
+          ],
+        },
+        {
+          heading: "Een checklist ter voorbereiding",
+          paragraphs: [
+            "Breng uw producten in kaart. Lijst elk product met digitale elementen op dat u in de EU aanbiedt, ook de producten die niet meer worden verkocht maar nog in gebruik zijn, en bepaal welke binnen het toepassingsgebied vallen. Noteer van welke componenten en leveranciers elk product afhangt; een softwarestuklijst waarmee u nu begint, dient ook voor de eisen van 2027.",
+            "Bepaal wie beslist. Een termijn van 24 uur laat geen ruimte om tijdens een gebeurtenis nog verantwoordelijkheden te verdelen. Wijs de personen aan die beoordelen of een kwetsbaarheid actief wordt uitgebuit of een incident ernstig is, leg vast wanneer de kennisname begint, en zorg dat beveiligingssignalen van klanten, onderzoekers, dreigingsinformatie en telemetrie hen snel bereiken.",
+            "Bereid de praktische kant voor. Zoek uit welk CSIRT uw coördinator is, wijs een vertegenwoordiger met een EU Login-account aan, en maak sjablonen voor de vroegtijdige waarschuwing, de melding van 72 uur en het eindverslag. Zet het proces op om gebruikers te informeren, en oefen de hele reeks één keer voordat u ze nodig hebt.",
+            "Bekijk uw contracten. U bent afhankelijk van leveranciers voor informatie over kwetsbaarheden in hun componenten. Vraag hun u snel te verwittigen, en ga na wat uw eigen klantcontracten zeggen over beveiligingscommunicatie. Zoals altijd is dit artikel een overzicht en geen juridisch advies; de FAQ van ENISA en de richtsnoeren van de Commissie zijn de referentieteksten en worden regelmatig bijgewerkt.",
+          ],
+        },
+        {
+          heading: "Hoe Shady AS kan helpen",
+          paragraphs: [
+            "Bij Shady AS SRL dekken onze diensten rond cybersecurity en softwareontwikkeling beide kanten van de CRA af: het proces en het product. We helpen u bepalen welke van uw producten binnen het toepassingsgebied vallen, procedures voor kwetsbaarheidsbeheer en incidentrespons op te zetten die de termijnen van 24 en 72 uur halen, en het engineeringwerk te plannen dat nodig is tegen december 2027.",
+            "Elke samenwerking begint met een gratis consultatie om uw doelstellingen en uw huidige IT-landschap te begrijpen. Neem contact met ons op om na te gaan hoe klaar uw productteam is.",
+          ],
+        },
+      ],
+    },
+  },
+  {
+    slug: "eu-ai-act-digital-omnibus-2026",
+    date: "2026-11-26",
+    readTime: 7,
+    title: {
+      en: "The EU AI Act after the Digital Omnibus: what was delayed and what applies now",
+      fr: "L'AI Act européen après le Digital Omnibus : ce qui est reporté et ce qui s'applique déjà",
+      nl: "De Europese AI Act na de Digital Omnibus: wat is uitgesteld en wat geldt nu al",
+    },
+    excerpt: {
+      en: "The Digital Omnibus on AI entered into force in July 2026 and pushed the AI Act's high-risk obligations to December 2027 and August 2028. But the transparency duties have applied since 2 August 2026, two more dates fall on 2 December 2026, and the prohibitions and general-purpose AI rules never moved. Here is what changed and how to use the extra time.",
+      fr: "Le Digital Omnibus sur l'IA est entré en vigueur en juillet 2026 et reporte les obligations de l'AI Act pour les systèmes à haut risque à décembre 2027 et août 2028. Mais les obligations de transparence s'appliquent depuis le 2 août 2026, deux autres échéances tombent le 2 décembre 2026, et les interdictions comme les règles sur l'IA à usage général n'ont pas bougé. Voici ce qui a changé et comment utiliser ce délai.",
+      nl: "De Digital Omnibus voor AI is in juli 2026 in werking getreden en verschuift de verplichtingen van de AI Act voor hoogrisicosystemen naar december 2027 en augustus 2028. Maar de transparantieverplichtingen gelden sinds 2 augustus 2026, op 2 december 2026 vallen nog twee data, en de verboden en de regels voor AI voor algemene doeleinden zijn niet verschoven. Dit is er veranderd, en zo gebruikt u de extra tijd.",
+    },
+    content: {
+      en: [
+        {
+          paragraphs: [
+            "On 24 July 2026 the EU published its Digital Omnibus on AI in the Official Journal, and the amendments to the AI Act entered into force a few days later. After a political agreement in early May, a European Parliament vote in mid-June and Council adoption at the end of June, the question that had hung over every compliance plan was settled: the obligations for high-risk AI systems, originally due on 2 August 2026, are postponed.",
+            "That headline has led many organisations to put their AI Act work on hold. That is a mistake. The Omnibus deferred one part of the regulation and left the rest in place: the prohibitions, the rules for general-purpose AI models and the transparency obligations all apply today, and two further dates fall on 2 December 2026. This article sets out what changed, what did not, and how to use the extra time.",
+          ],
+        },
+        {
+          heading: "What the Omnibus changed",
+          paragraphs: [
+            "The core change is the calendar for high-risk systems. Stand-alone high-risk systems listed in Annex III, which cover uses such as recruitment and worker management, credit scoring, access to education and essential services, biometrics and critical infrastructure, now face their obligations from 2 December 2027 instead of 2 August 2026. AI embedded in products already regulated under EU product legislation (Annex I, for example machinery or medical devices) moves from 2 August 2027 to 2 August 2028.",
+            "The Commission had originally proposed tying the new dates to the availability of harmonised standards. The final text uses fixed dates instead, which makes planning simpler. The deadline for Member States to set up national AI regulatory sandboxes also slips by a year, to 2 August 2027.",
+            "What the Omnibus did not do is rewrite the substance. The requirements for high-risk systems are the same as before: risk management, data governance, technical documentation, logging, human oversight, accuracy and robustness, conformity assessment and registration. The deadline moved; the workload did not shrink.",
+          ],
+        },
+        {
+          heading: "What did not move",
+          paragraphs: [
+            "Three blocks of the AI Act were already applicable and remain so. The prohibited practices in Article 5, such as social scoring, manipulative techniques and untargeted scraping of facial images, have applied since 2 February 2025. So has the AI literacy duty in Article 4: people who operate or use AI systems on your behalf need a sufficient understanding of them. The May agreement reworded this as a duty to support the development of AI literacy rather than to guarantee a given level, but either way training your staff is expected.",
+            "The obligations for providers of general-purpose AI models have applied since 2 August 2025 and were left largely untouched. The penalty ceilings are also unchanged: up to EUR 35 million or 7% of worldwide annual turnover for prohibited practices, and up to EUR 15 million or 3% for most other infringements, including the transparency rules.",
+          ],
+        },
+        {
+          heading: "Transparency: in force since August",
+          paragraphs: [
+            "The transparency obligations in Article 50 started to apply on 2 August 2026, as originally planned. They concern far more companies than the high-risk rules, because they attach to everyday uses of generative AI. Providers must make sure people know they are interacting with an AI system, unless that is obvious from the context. Providers of generative AI must mark synthetic audio, image, video and text output in a machine-readable way, so that it can be detected as artificially generated.",
+            "Deployers, meaning the organisations that use these systems, have duties of their own. Deepfakes must be disclosed as such. AI-generated text published to inform the public on matters of public interest must be labelled, unless it has gone through human review and someone holds editorial responsibility for it. People exposed to emotion recognition or biometric categorisation must be told.",
+            "There is one transitional rule, and it is about to expire. Generative AI systems that were already on the market before 2 August 2026 were given until 2 December 2026 to comply with the machine-readable marking duty. Systems launched after that date had no grace period, and neither did the deployer duties. A Code of Practice on marking and labelling AI-generated content and Commission guidelines on Article 50 were finalised over the summer and are the best reference for what good practice looks like.",
+          ],
+        },
+        {
+          heading: "A new prohibition from December",
+          paragraphs: [
+            "The Omnibus also added to the list of banned practices. From 2 December 2026, the AI Act prohibits AI systems that generate or manipulate non-consensual intimate imagery, the so-called nudification apps, or child sexual abuse material. Providers are caught where such output is a reasonably foreseeable result of their system and they have not put adequate safeguards in place. For most businesses this changes nothing in practice, but any company offering image or video generation should check its safeguards and terms of use.",
+          ],
+        },
+        {
+          heading: "Relief for smaller companies, and a stronger AI Office",
+          paragraphs: [
+            "Several adjustments ease the burden on smaller players. SMEs, and now small mid-cap companies too, can use simplified technical documentation. For fines, SMEs are subject to whichever is lower of the fixed amount and the percentage of turnover, and the Omnibus extends a similar rule to small mid-caps for part of the penalty scale.",
+            "Two other changes matter to anyone building AI products. First, the legal basis for processing special categories of personal data to detect and correct bias, previously reserved for high-risk systems, is extended to other AI systems and models where strictly necessary and under safeguards; the GDPR continues to apply alongside it. Second, supervision is more centralised: the Commission's AI Office becomes responsible for AI systems built on a general-purpose model by the same provider, and for AI embedded in very large online platforms and search engines. National authorities keep the rest.",
+          ],
+        },
+        {
+          heading: "What to do with the extra time",
+          paragraphs: [
+            "The companies that will be ready in December 2027 are the ones that keep working now. Start with an inventory: list every AI system you build, buy or embed, and record for each one whether you are the provider or the deployer and which risk tier it falls into. Most organisations discover more systems than they expected, often inside software they already license.",
+            "Then deal with what already applies. Check each customer-facing chatbot and each generative workflow against Article 50: is the disclosure in place, is generated content marked, and is any exception you rely on documented? Confirm that no use case comes near the prohibited practices. Give the people who use AI at work training that matches what they actually do with it.",
+            "For high-risk uses, treat the sixteen months as build time. Risk management, data governance, documentation and human oversight take longer to put in place than to describe, and they depend on suppliers: ask your vendors now what they will deliver and when, and write it into contracts. Reuse what you have. An existing information security management system covers much of the ground, and a certification such as ISO/IEC 42001 helps structure the work, although it does not by itself create a presumption of conformity with the AI Act.",
+            "Finally, this is a summary and not legal advice. Dates and details in this article reflect the texts and guidance available at the time of writing; check the Official Journal and your legal counsel before relying on them.",
+          ],
+        },
+        {
+          heading: "How Shady AS can help",
+          paragraphs: [
+            "At Shady AS SRL, we help organisations in Belgium and across the EU turn regulation into a workable plan. Through our IT strategy, governance and compliance services, we can help you build your AI inventory, classify your systems, put the Article 50 transparency measures in place and prepare the documentation and controls that high-risk systems will need.",
+            "Every engagement starts with a free consultation to understand your goals and your current IT landscape. Contact us to discuss where your organisation stands on the AI Act and what to do first.",
+          ],
+        },
+      ],
+      fr: [
+        {
+          paragraphs: [
+            "Le 24 juillet 2026, l'Union européenne a publié au Journal officiel son Digital Omnibus sur l'IA, et les modifications de l'AI Act sont entrées en vigueur quelques jours plus tard. Après un accord politique début mai, un vote du Parlement européen à la mi-juin et l'adoption par le Conseil fin juin, la question qui pesait sur tous les plans de mise en conformité est tranchée : les obligations applicables aux systèmes d'IA à haut risque, initialement prévues pour le 2 août 2026, sont reportées.",
+            "Ce titre a conduit de nombreuses organisations à mettre leur chantier AI Act en pause. C'est une erreur. L'Omnibus a différé une partie du règlement et laissé le reste en place : les interdictions, les règles applicables aux modèles d'IA à usage général et les obligations de transparence s'appliquent aujourd'hui, et deux autres échéances tombent le 2 décembre 2026. Cet article fait le point sur ce qui a changé, ce qui n'a pas changé, et la manière d'utiliser ce délai supplémentaire.",
+          ],
+        },
+        {
+          heading: "Ce que l'Omnibus a changé",
+          paragraphs: [
+            "Le changement central concerne le calendrier des systèmes à haut risque. Les systèmes autonomes à haut risque énumérés à l'annexe III, qui couvrent des usages tels que le recrutement et la gestion des travailleurs, l'évaluation de la solvabilité, l'accès à l'éducation et aux services essentiels, la biométrie et les infrastructures critiques, sont désormais soumis à leurs obligations à partir du 2 décembre 2027 au lieu du 2 août 2026. L'IA intégrée dans des produits déjà réglementés par la législation européenne sur les produits (annexe I, par exemple les machines ou les dispositifs médicaux) passe du 2 août 2027 au 2 août 2028.",
+            "La Commission avait d'abord proposé de lier les nouvelles dates à la disponibilité des normes harmonisées. Le texte final retient des dates fixes, ce qui simplifie la planification. L'échéance imposée aux États membres pour mettre en place des bacs à sable réglementaires nationaux recule elle aussi d'un an, au 2 août 2027.",
+            "Ce que l'Omnibus n'a pas fait, c'est réécrire le fond. Les exigences applicables aux systèmes à haut risque restent les mêmes : gestion des risques, gouvernance des données, documentation technique, journalisation, contrôle humain, exactitude et robustesse, évaluation de la conformité et enregistrement. L'échéance a bougé ; la charge de travail n'a pas diminué.",
+          ],
+        },
+        {
+          heading: "Ce qui n'a pas bougé",
+          paragraphs: [
+            "Trois volets de l'AI Act étaient déjà applicables et le restent. Les pratiques interdites par l'article 5, comme la notation sociale, les techniques de manipulation et la collecte non ciblée d'images faciales, s'appliquent depuis le 2 février 2025. Il en va de même pour l'obligation de maîtrise de l'IA prévue à l'article 4 : les personnes qui exploitent ou utilisent des systèmes d'IA pour votre compte doivent en avoir une compréhension suffisante. L'accord de mai a reformulé cette obligation en un devoir de soutenir le développement de la maîtrise de l'IA plutôt que de garantir un niveau donné, mais dans les deux cas la formation de votre personnel est attendue.",
+            "Les obligations des fournisseurs de modèles d'IA à usage général s'appliquent depuis le 2 août 2025 et sont restées largement inchangées. Les plafonds de sanctions le sont aussi : jusqu'à 35 millions d'euros ou 7 % du chiffre d'affaires annuel mondial pour les pratiques interdites, et jusqu'à 15 millions d'euros ou 3 % pour la plupart des autres infractions, y compris aux règles de transparence.",
+          ],
+        },
+        {
+          heading: "Transparence : en vigueur depuis août",
+          paragraphs: [
+            "Les obligations de transparence de l'article 50 s'appliquent depuis le 2 août 2026, comme prévu à l'origine. Elles concernent bien plus d'entreprises que les règles sur le haut risque, car elles visent des usages quotidiens de l'IA générative. Les fournisseurs doivent veiller à ce que les personnes sachent qu'elles interagissent avec un système d'IA, sauf si cela ressort clairement du contexte. Les fournisseurs d'IA générative doivent marquer les contenus audio, image, vidéo et texte de synthèse dans un format lisible par machine, afin qu'ils puissent être détectés comme générés artificiellement.",
+            "Les déployeurs, c'est-à-dire les organisations qui utilisent ces systèmes, ont leurs propres obligations. Les hypertrucages (deepfakes) doivent être signalés comme tels. Un texte généré par IA et publié pour informer le public sur des questions d'intérêt public doit être identifié, sauf s'il a fait l'objet d'une relecture humaine et qu'une personne en assume la responsabilité éditoriale. Les personnes exposées à un système de reconnaissance des émotions ou de catégorisation biométrique doivent en être informées.",
+            "Il existe une règle transitoire, et elle est sur le point d'expirer. Les systèmes d'IA générative déjà sur le marché avant le 2 août 2026 ont eu jusqu'au 2 décembre 2026 pour se conformer à l'obligation de marquage lisible par machine. Les systèmes lancés après cette date n'ont bénéficié d'aucun délai, pas plus que les obligations des déployeurs. Un code de bonnes pratiques sur le marquage et l'étiquetage des contenus générés par IA ainsi que des lignes directrices de la Commission sur l'article 50 ont été finalisés durant l'été ; ce sont les meilleures références pour savoir à quoi ressemblent de bonnes pratiques.",
+          ],
+        },
+        {
+          heading: "Une nouvelle interdiction à partir de décembre",
+          paragraphs: [
+            "L'Omnibus a également allongé la liste des pratiques interdites. À partir du 2 décembre 2026, l'AI Act interdit les systèmes d'IA qui génèrent ou manipulent des images intimes non consenties, les applications dites de nudification, ou des contenus pédopornographiques. Les fournisseurs sont visés lorsque de tels résultats sont une conséquence raisonnablement prévisible de leur système et qu'ils n'ont pas mis en place de garde-fous adéquats. Pour la plupart des entreprises, cela ne change rien en pratique, mais toute société proposant de la génération d'images ou de vidéos devrait vérifier ses garde-fous et ses conditions d'utilisation.",
+          ],
+        },
+        {
+          heading: "Un allègement pour les petites entreprises et un Bureau de l'IA renforcé",
+          paragraphs: [
+            "Plusieurs ajustements allègent la charge des plus petits acteurs. Les PME, et désormais aussi les petites entreprises de taille intermédiaire, peuvent recourir à une documentation technique simplifiée. En matière d'amendes, les PME se voient appliquer le plus faible des deux montants, entre la somme fixe et le pourcentage du chiffre d'affaires, et l'Omnibus étend une règle similaire aux petites entreprises de taille intermédiaire pour une partie de l'échelle des sanctions.",
+            "Deux autres changements comptent pour quiconque développe des produits d'IA. D'abord, la base juridique permettant de traiter des catégories particulières de données personnelles pour détecter et corriger les biais, jusque-là réservée aux systèmes à haut risque, est étendue aux autres systèmes et modèles d'IA lorsque cela est strictement nécessaire et moyennant des garanties ; le RGPD continue de s'appliquer en parallèle. Ensuite, la supervision est davantage centralisée : le Bureau de l'IA de la Commission devient compétent pour les systèmes d'IA construits sur un modèle à usage général par le même fournisseur, ainsi que pour l'IA intégrée dans les très grandes plateformes en ligne et les très grands moteurs de recherche. Les autorités nationales conservent le reste.",
+          ],
+        },
+        {
+          heading: "Que faire de ce délai supplémentaire",
+          paragraphs: [
+            "Les entreprises qui seront prêtes en décembre 2027 sont celles qui continuent à travailler dès maintenant. Commencez par un inventaire : recensez chaque système d'IA que vous développez, achetez ou intégrez, et notez pour chacun si vous en êtes le fournisseur ou le déployeur et à quel niveau de risque il appartient. La plupart des organisations découvrent plus de systèmes qu'elles ne le pensaient, souvent à l'intérieur de logiciels dont elles ont déjà la licence.",
+            "Traitez ensuite ce qui s'applique déjà. Vérifiez chaque chatbot en contact avec vos clients et chaque flux de travail génératif au regard de l'article 50 : l'information est-elle en place, les contenus générés sont-ils marqués, et toute exception invoquée est-elle documentée ? Assurez-vous qu'aucun cas d'usage ne s'approche des pratiques interdites. Donnez aux personnes qui utilisent l'IA au travail une formation qui correspond à ce qu'elles en font réellement.",
+            "Pour les usages à haut risque, considérez ces seize mois comme du temps de construction. La gestion des risques, la gouvernance des données, la documentation et le contrôle humain sont plus longs à mettre en place qu'à décrire, et ils dépendent des fournisseurs : demandez-leur dès maintenant ce qu'ils livreront et quand, et inscrivez-le dans les contrats. Réutilisez l'existant. Un système de management de la sécurité de l'information couvre déjà une bonne partie du terrain, et une certification telle que l'ISO/IEC 42001 aide à structurer le travail, même si elle ne crée pas à elle seule de présomption de conformité à l'AI Act.",
+            "Enfin, cet article est une synthèse et non un avis juridique. Les dates et les détails reflètent les textes et les orientations disponibles au moment de la rédaction ; vérifiez le Journal officiel et consultez votre conseil juridique avant de vous y fier.",
+          ],
+        },
+        {
+          heading: "Comment Shady AS peut vous aider",
+          paragraphs: [
+            "Chez Shady AS SRL, nous aidons les organisations en Belgique et dans toute l'UE à transformer la réglementation en un plan applicable. Grâce à nos services de stratégie IT, de gouvernance et de conformité, nous pouvons vous aider à dresser votre inventaire des systèmes d'IA, à les classer, à mettre en place les mesures de transparence de l'article 50 et à préparer la documentation et les contrôles dont les systèmes à haut risque auront besoin.",
+            "Chaque collaboration commence par une consultation gratuite pour comprendre vos objectifs et votre paysage IT actuel. Contactez-nous pour discuter de la situation de votre organisation au regard de l'AI Act et des premières actions à mener.",
+          ],
+        },
+      ],
+      nl: [
+        {
+          paragraphs: [
+            "Op 24 juli 2026 publiceerde de EU haar Digital Omnibus voor AI in het Publicatieblad, en enkele dagen later traden de wijzigingen aan de AI Act in werking. Na een politiek akkoord begin mei, een stemming in het Europees Parlement half juni en de goedkeuring door de Raad eind juni is de vraag die boven elk complianceplan hing beantwoord: de verplichtingen voor AI-systemen met een hoog risico, oorspronkelijk voorzien voor 2 augustus 2026, zijn uitgesteld.",
+            "Die kop heeft veel organisaties ertoe gebracht hun werk rond de AI Act stil te leggen. Dat is een vergissing. De Omnibus heeft één deel van de verordening uitgesteld en de rest laten staan: de verboden, de regels voor AI-modellen voor algemene doeleinden en de transparantieverplichtingen gelden vandaag, en op 2 december 2026 vallen nog twee data. Dit artikel zet op een rij wat er veranderd is, wat niet, en hoe u de extra tijd gebruikt.",
+          ],
+        },
+        {
+          heading: "Wat de Omnibus veranderd heeft",
+          paragraphs: [
+            "De kern van de wijziging is de kalender voor hoogrisicosystemen. Voor de op zichzelf staande hoogrisicosystemen uit bijlage III, zoals toepassingen voor werving en personeelsbeheer, kredietbeoordeling, toegang tot onderwijs en essentiële diensten, biometrie en kritieke infrastructuur, gelden de verplichtingen nu vanaf 2 december 2027 in plaats van 2 augustus 2026. AI die is ingebouwd in producten die al onder de Europese productwetgeving vallen (bijlage I, bijvoorbeeld machines of medische hulpmiddelen) verschuift van 2 augustus 2027 naar 2 augustus 2028.",
+            "De Commissie had aanvankelijk voorgesteld om de nieuwe data te koppelen aan de beschikbaarheid van geharmoniseerde normen. De definitieve tekst werkt met vaste data, wat de planning eenvoudiger maakt. Ook de termijn waarbinnen de lidstaten nationale AI-testomgevingen voor regelgeving moeten opzetten, schuift een jaar op, naar 2 augustus 2027.",
+            "Wat de Omnibus niet gedaan heeft, is de inhoud herschrijven. De eisen voor hoogrisicosystemen blijven dezelfde: risicobeheer, datagovernance, technische documentatie, logging, menselijk toezicht, nauwkeurigheid en robuustheid, conformiteitsbeoordeling en registratie. De deadline is verschoven; het werk is niet minder geworden.",
+          ],
+        },
+        {
+          heading: "Wat niet verschoven is",
+          paragraphs: [
+            "Drie onderdelen van de AI Act waren al van toepassing en blijven dat. De verboden praktijken uit artikel 5, zoals sociale scoring, manipulatieve technieken en het ongericht verzamelen van gezichtsafbeeldingen, gelden sinds 2 februari 2025. Hetzelfde geldt voor de verplichting rond AI-geletterdheid in artikel 4: wie namens u AI-systemen bedient of gebruikt, moet er voldoende inzicht in hebben. Het akkoord van mei heeft dit geherformuleerd als een plicht om de ontwikkeling van AI-geletterdheid te ondersteunen in plaats van een bepaald niveau te garanderen, maar in beide gevallen wordt van u verwacht dat u uw medewerkers opleidt.",
+            "De verplichtingen voor aanbieders van AI-modellen voor algemene doeleinden gelden sinds 2 augustus 2025 en zijn grotendeels ongewijzigd gebleven. Ook de maximale sancties zijn dezelfde: tot 35 miljoen euro of 7% van de wereldwijde jaaromzet voor verboden praktijken, en tot 15 miljoen euro of 3% voor de meeste andere inbreuken, waaronder die op de transparantieregels.",
+          ],
+        },
+        {
+          heading: "Transparantie: van kracht sinds augustus",
+          paragraphs: [
+            "De transparantieverplichtingen van artikel 50 zijn sinds 2 augustus 2026 van toepassing, zoals oorspronkelijk gepland. Ze raken veel meer bedrijven dan de regels voor hoog risico, omdat ze betrekking hebben op alledaags gebruik van generatieve AI. Aanbieders moeten ervoor zorgen dat mensen weten dat ze met een AI-systeem communiceren, tenzij dat duidelijk is uit de context. Aanbieders van generatieve AI moeten synthetische audio, beelden, video en tekst machineleesbaar markeren, zodat ze als kunstmatig gegenereerd herkend kunnen worden.",
+            "Gebruiksverantwoordelijken, dus de organisaties die deze systemen inzetten, hebben eigen verplichtingen. Deepfakes moeten als zodanig kenbaar worden gemaakt. Door AI gegenereerde tekst die wordt gepubliceerd om het publiek te informeren over zaken van algemeen belang moet als zodanig worden aangeduid, tenzij de tekst door een mens is nagekeken en iemand de redactionele verantwoordelijkheid draagt. Personen die worden blootgesteld aan emotieherkenning of biometrische categorisering moeten daarvan op de hoogte worden gebracht.",
+            "Er is één overgangsregel, en die loopt bijna af. Generatieve AI-systemen die al vóór 2 augustus 2026 op de markt waren, kregen tot 2 december 2026 de tijd om aan de plicht tot machineleesbare markering te voldoen. Systemen die na die datum zijn gelanceerd kregen geen overgangstermijn, en de verplichtingen voor gebruiksverantwoordelijken evenmin. Een praktijkcode over het markeren en labelen van door AI gegenereerde inhoud en richtsnoeren van de Commissie over artikel 50 zijn in de loop van de zomer afgerond; ze zijn de beste leidraad voor wat goede praktijk inhoudt.",
+          ],
+        },
+        {
+          heading: "Een nieuw verbod vanaf december",
+          paragraphs: [
+            "De Omnibus heeft ook de lijst van verboden praktijken uitgebreid. Vanaf 2 december 2026 verbiedt de AI Act AI-systemen die intieme beelden zonder toestemming genereren of manipuleren, de zogenoemde nudification-apps, of materiaal van seksueel kindermisbruik. Aanbieders vallen onder het verbod wanneer dergelijke output een redelijkerwijs voorzienbaar resultaat van hun systeem is en ze geen passende waarborgen hebben ingebouwd. Voor de meeste bedrijven verandert dit in de praktijk niets, maar elk bedrijf dat beeld- of videogeneratie aanbiedt, controleert best zijn waarborgen en gebruiksvoorwaarden.",
+          ],
+        },
+        {
+          heading: "Verlichting voor kleinere bedrijven en een sterker AI-bureau",
+          paragraphs: [
+            "Een aantal aanpassingen verlicht de last voor kleinere spelers. Kmo's, en nu ook kleine midcaps, mogen vereenvoudigde technische documentatie gebruiken. Voor boetes geldt voor kmo's het laagste van de twee bedragen, het vaste bedrag of het percentage van de omzet, en de Omnibus breidt een vergelijkbare regel uit naar kleine midcaps voor een deel van de sanctieschaal.",
+            "Twee andere wijzigingen zijn van belang voor wie AI-producten bouwt. Ten eerste wordt de rechtsgrond om bijzondere categorieën van persoonsgegevens te verwerken voor het opsporen en corrigeren van bias, tot nu toe voorbehouden aan hoogrisicosystemen, uitgebreid naar andere AI-systemen en -modellen, voor zover dat strikt noodzakelijk is en met waarborgen; de AVG blijft daarnaast van toepassing. Ten tweede wordt het toezicht meer gecentraliseerd: het AI-bureau van de Commissie wordt bevoegd voor AI-systemen die door dezelfde aanbieder op een model voor algemene doeleinden zijn gebouwd, en voor AI die is ingebouwd in zeer grote onlineplatforms en zoekmachines. De nationale autoriteiten behouden de rest.",
+          ],
+        },
+        {
+          heading: "Wat u met de extra tijd doet",
+          paragraphs: [
+            "De bedrijven die in december 2027 klaar zijn, zijn de bedrijven die nu doorwerken. Begin met een inventaris: lijst elk AI-systeem op dat u bouwt, aankoopt of inbouwt, en noteer per systeem of u aanbieder of gebruiksverantwoordelijke bent en in welke risicoklasse het valt. De meeste organisaties ontdekken meer systemen dan ze hadden verwacht, vaak in software waarvoor ze al een licentie hebben.",
+            "Pak daarna aan wat al van toepassing is. Toets elke chatbot die met klanten praat en elke generatieve workflow aan artikel 50: is de melding aanwezig, wordt gegenereerde inhoud gemarkeerd, en is elke uitzondering waarop u steunt gedocumenteerd? Ga na dat geen enkele toepassing in de buurt komt van de verboden praktijken. Geef de mensen die AI op het werk gebruiken een opleiding die aansluit bij wat ze er werkelijk mee doen.",
+            "Beschouw voor toepassingen met een hoog risico de zestien maanden als bouwtijd. Risicobeheer, datagovernance, documentatie en menselijk toezicht kosten meer tijd om in te voeren dan om te beschrijven, en ze hangen af van leveranciers: vraag hun nu wat ze zullen leveren en wanneer, en leg dat contractueel vast. Hergebruik wat u hebt. Een bestaand managementsysteem voor informatiebeveiliging dekt al een groot deel af, en een certificering zoals ISO/IEC 42001 helpt het werk te structureren, al levert ze op zich geen vermoeden van conformiteit met de AI Act op.",
+            "Tot slot: dit is een samenvatting en geen juridisch advies. De data en details in dit artikel weerspiegelen de teksten en richtsnoeren die bij het schrijven beschikbaar waren; raadpleeg het Publicatieblad en uw juridisch adviseur voordat u erop steunt.",
+          ],
+        },
+        {
+          heading: "Hoe Shady AS kan helpen",
+          paragraphs: [
+            "Bij Shady AS SRL helpen we organisaties in België en in de hele EU om regelgeving om te zetten in een werkbaar plan. Met onze diensten rond IT-strategie, governance en compliance helpen we u uw AI-inventaris op te stellen, uw systemen te classificeren, de transparantiemaatregelen van artikel 50 in te voeren en de documentatie en controles voor te bereiden die hoogrisicosystemen nodig zullen hebben.",
+            "Elke samenwerking begint met een gratis consultatie om uw doelstellingen en uw huidige IT-landschap te begrijpen. Neem contact met ons op om te bespreken waar uw organisatie staat ten opzichte van de AI Act en wat u eerst moet doen.",
+          ],
+        },
+      ],
+    },
+  },
+  {
+    slug: "ai-agents-production-2026",
+    date: "2026-11-26",
+    readTime: 7,
+    title: {
+      en: "AI agents in 2026: why most pilots stall, and what gets them into production",
+      fr: "Agents IA en 2026 : pourquoi la plupart des pilotes stagnent, et ce qui les mène en production",
+      nl: "AI-agents in 2026: waarom de meeste pilots vastlopen, en wat ze in productie brengt",
+    },
+    excerpt: {
+      en: "One in five EU enterprises now uses AI, and more than a third of Belgian ones, yet Gartner reports that only 13% of CIOs see significant value from it. AI agents are where that gap is widest. What the latest data says, which standards have settled, and a practical ninety-day path from pilot to production.",
+      fr: "Une entreprise européenne sur cinq utilise désormais l'IA, et plus d'un tiers des entreprises belges, mais selon Gartner seuls 13 % des DSI en tirent une valeur significative. C'est avec les agents IA que cet écart est le plus grand. Ce que disent les dernières données, quels standards se sont imposés, et un parcours concret de quatre-vingt-dix jours du pilote à la production.",
+      nl: "Eén op de vijf Europese ondernemingen gebruikt nu AI, en meer dan een derde van de Belgische, maar volgens Gartner haalt slechts 13% van de CIO's er aanzienlijke waarde uit. Bij AI-agents is die kloof het grootst. Wat de recentste cijfers zeggen, welke standaarden zich hebben gevestigd, en een praktisch traject van negentig dagen van pilot naar productie.",
+    },
+    content: {
+      en: [
+        {
+          paragraphs: [
+            "Artificial intelligence is no longer rare in European companies. Eurostat's latest figures show that 20.0% of EU enterprises with ten or more employees used AI in 2025, up from 13.5% a year earlier. Belgium is well ahead: according to Statbel, 34.5% of Belgian companies used at least one AI technology in 2025, against 24.7% in 2024, which places the country in the European top five. Among large Belgian enterprises the share exceeds 76%; among small ones it is just over 28%.",
+            "Adoption, however, is not the same as results. In October 2026 Gartner reported that only 13% of the 2,002 CIOs and technology executives it surveyed say their enterprise has realised significant or transformational value from AI. A month earlier it found that only 22% of organisations have scaled AI across multiple business units. Nowhere is this gap between trying and delivering wider than with AI agents, the systems everyone is piloting in 2026.",
+          ],
+        },
+        {
+          heading: "What an AI agent is, and is not",
+          paragraphs: [
+            "A chatbot answers a question. An agent is given a goal and works towards it: it plans steps, calls tools such as search, databases, business applications or code execution, checks the result and continues until the task is done or it needs a person. That loop is what makes agents useful for work that spans several systems, and also what makes them harder to control than a single prompt and response.",
+            "The label is applied far more widely than the capability. Gartner has called this agent washing: existing assistants, chatbots and automation scripts rebranded as agents. In mid-2025 it estimated that only about 130 of the thousands of vendors claiming agentic AI actually offered it. Before comparing products, ask what the system can do on its own, which tools it can use, and what stops it.",
+          ],
+        },
+        {
+          heading: "The production gap in numbers",
+          paragraphs: [
+            "Surveys on agents disagree wildly, mostly because they define deployment differently. The more careful ones tell a consistent story. McKinsey's State of AI survey, published in November 2025, found 23% of organisations scaling an agentic AI system somewhere in the business and a further 39% experimenting. Gartner predicted in June 2025 that more than 40% of agentic AI projects would be cancelled by the end of 2027, citing escalating costs, unclear business value and inadequate risk controls.",
+            "Those three reasons are worth reading as a checklist, because they are all avoidable. Costs escalate when nobody measures what a task costs per run. Business value is unclear when the pilot was chosen because it was impressive and not because a process owner wanted it. Risk controls are inadequate when the agent was given broad access to make the demo work.",
+          ],
+        },
+        {
+          heading: "The plumbing has standardised",
+          paragraphs: [
+            "The most important change of the past year is unglamorous. Connecting an agent to your systems used to mean a custom integration for each model and each tool. The Model Context Protocol (MCP), open-sourced by Anthropic in November 2024, defines a common way to expose tools and data to any compatible model. In December 2025 it was donated to the new Agentic AI Foundation under the Linux Foundation, alongside Block's goose and OpenAI's AGENTS.md, with AWS, Google and Microsoft among the members. By then there were more than 10,000 published MCP servers, and the protocol was supported by Claude, ChatGPT, Gemini, Microsoft Copilot, VS Code and Cursor.",
+            "A second standard covers a different layer. The Agent2Agent (A2A) protocol, created by Google and also hosted by the Linux Foundation, describes how agents from different vendors or organisations talk to each other. It has reached its first stable version and, by April 2026, the support of more than 150 organisations, with integrations in Microsoft's and AWS's agent platforms. The two are complementary: MCP connects an agent to tools and data, A2A connects agents to agents.",
+            "For a business this means two things. An integration built once can be reused across models, which lowers the cost of switching supplier. And the hard part of an agent project is no longer the connection: it is deciding what the agent is allowed to do.",
+          ],
+        },
+        {
+          heading: "What holds up in production",
+          paragraphs: [
+            "The agents that survive contact with real work share a few traits. They have a narrow job with a named owner: triaging support tickets, reconciling invoices against purchase orders, preparing a first draft of a compliance questionnaire. They have a measurable outcome, such as handling time or error rate, and a baseline taken before the project started.",
+            "They are tested like software. A set of real examples with known good answers is run every time the prompt, the model or a tool changes, because a change that improves one case often breaks another. Every run is traced, so that when something goes wrong you can see which step, which tool call and which piece of context caused it. Cost per task is tracked alongside quality.",
+            "And they keep people in the loop where it matters. Reading and drafting can be automatic. Sending money, deleting data, contacting a customer or changing a production system should require a human approval until the track record justifies otherwise. This is slower than a fully autonomous demo, and it is the reason the project is still running a year later.",
+          ],
+        },
+        {
+          heading: "Security: treat the agent as an identity",
+          paragraphs: [
+            "An agent reads content you do not control (emails, web pages, documents) and then takes actions. That combination creates a risk that classic applications do not have: prompt injection, where instructions hidden in the content redirect the agent. It tops OWASP's list of risks for LLM applications, and OWASP has since published a dedicated Top 10 for agentic applications.",
+            "There is no single fix, so the defence is architectural. Give each agent its own identity and the minimum permissions for its task. Keep credentials out of the model's context. Separate what the agent may read from what it may change. Log every action. For sensitive data, decide deliberately where the model runs and where the data goes; for some workloads the right answer is infrastructure you control.",
+          ],
+        },
+        {
+          heading: "The European rules that apply",
+          paragraphs: [
+            "Agents do not sit outside regulation. Under the EU AI Act, people must be told when they are interacting with an AI system, a duty that has applied since 2 August 2026. Agents used in areas such as recruitment or credit decisions will fall under the high-risk regime, now due on 2 December 2027. The GDPR applies whenever personal data is processed, and for many organisations NIS2 sets the security baseline. None of this prevents deployment, but it shapes the design: logging, human oversight and clear documentation are both good engineering and legal requirements.",
+          ],
+        },
+        {
+          heading: "A ninety-day path from pilot to production",
+          paragraphs: [
+            "Weeks 1 to 2: choose one process with a willing owner, enough volume to matter and tolerable consequences if the agent is wrong. Measure how it performs today. Collect fifty to a hundred real cases as a test set.",
+            "Weeks 3 to 6: build the agent with read-only access first. Connect the tools it needs through standard interfaces, run the test set on every change, and review failures with the process owner every week.",
+            "Weeks 7 to 10: put it in front of a small group of users, with human approval on every action that changes something. Trace every run. Track quality, time saved and cost per task.",
+            "Weeks 11 to 13: compare against the baseline and decide. Extend, adjust or stop. A project that stops at this point with clear numbers has cost little and taught a lot; one that drifts for a year without them is how the 40% happens.",
+          ],
+        },
+        {
+          heading: "How Shady AS can help",
+          paragraphs: [
+            "At Shady AS SRL, we help organisations move from experiments to systems that run. Our consultants combine software development, data and cybersecurity expertise to select the right first use case, integrate agents with your existing applications and data, and put in place the testing, access controls and monitoring that production requires.",
+            "Every engagement starts with a free consultation to understand your goals and your current IT landscape. Contact us to discuss where an agent could take real work off your team.",
+          ],
+        },
+      ],
+      fr: [
+        {
+          paragraphs: [
+            "L'intelligence artificielle n'est plus une rareté dans les entreprises européennes. Les derniers chiffres d'Eurostat montrent que 20,0 % des entreprises de l'UE de dix salariés ou plus utilisaient l'IA en 2025, contre 13,5 % un an plus tôt. La Belgique est nettement en avance : selon Statbel, 34,5 % des entreprises belges utilisaient au moins une technologie d'IA en 2025, contre 24,7 % en 2024, ce qui place le pays dans le top cinq européen. Parmi les grandes entreprises belges, la part dépasse 76 % ; parmi les petites, elle est d'un peu plus de 28 %.",
+            "Adopter n'est toutefois pas obtenir des résultats. En octobre 2026, Gartner indiquait que seuls 13 % des 2 002 DSI et responsables technologiques interrogés estiment que leur entreprise a tiré de l'IA une valeur significative ou transformationnelle. Un mois plus tôt, le cabinet constatait que seules 22 % des organisations ont déployé l'IA à l'échelle de plusieurs unités métier. Nulle part cet écart entre essayer et livrer n'est plus large qu'avec les agents IA, ces systèmes que tout le monde teste en 2026.",
+          ],
+        },
+        {
+          heading: "Ce qu'est un agent IA, et ce qu'il n'est pas",
+          paragraphs: [
+            "Un chatbot répond à une question. Un agent reçoit un objectif et travaille à l'atteindre : il planifie des étapes, appelle des outils tels que la recherche, des bases de données, des applications métier ou l'exécution de code, vérifie le résultat et continue jusqu'à ce que la tâche soit terminée ou qu'il ait besoin d'une personne. Cette boucle est ce qui rend les agents utiles pour un travail qui traverse plusieurs systèmes, et aussi ce qui les rend plus difficiles à maîtriser qu'une simple question suivie d'une réponse.",
+            "L'étiquette est appliquée bien plus largement que la capacité. Gartner parle d'« agent washing » : des assistants, des chatbots et des scripts d'automatisation existants rebaptisés agents. Mi-2025, le cabinet estimait que seuls 130 environ des milliers de fournisseurs se réclamant de l'IA agentique en proposaient réellement. Avant de comparer des produits, demandez ce que le système sait faire seul, quels outils il peut utiliser, et ce qui l'arrête.",
+          ],
+        },
+        {
+          heading: "L'écart de mise en production en chiffres",
+          paragraphs: [
+            "Les enquêtes sur les agents se contredisent fortement, surtout parce qu'elles ne définissent pas le déploiement de la même façon. Les plus rigoureuses racontent une histoire cohérente. L'enquête State of AI de McKinsey, publiée en novembre 2025, relevait que 23 % des organisations passaient à l'échelle un système d'IA agentique quelque part dans l'entreprise et que 39 % supplémentaires expérimentaient. Gartner prévoyait en juin 2025 que plus de 40 % des projets d'IA agentique seraient abandonnés d'ici fin 2027, en raison de coûts qui s'envolent, d'une valeur métier floue et de contrôles des risques insuffisants.",
+            "Ces trois raisons méritent d'être lues comme une liste de contrôle, car elles sont toutes évitables. Les coûts s'envolent quand personne ne mesure ce que coûte une tâche à chaque exécution. La valeur métier est floue quand le pilote a été choisi parce qu'il était impressionnant et non parce qu'un responsable de processus le voulait. Les contrôles des risques sont insuffisants quand on a donné à l'agent des accès larges pour que la démonstration fonctionne.",
+          ],
+        },
+        {
+          heading: "La tuyauterie s'est standardisée",
+          paragraphs: [
+            "Le changement le plus important de l'année écoulée n'a rien de spectaculaire. Connecter un agent à vos systèmes supposait jusqu'ici une intégration sur mesure pour chaque modèle et chaque outil. Le Model Context Protocol (MCP), publié en open source par Anthropic en novembre 2024, définit une manière commune d'exposer des outils et des données à tout modèle compatible. En décembre 2025, il a été confié à la nouvelle Agentic AI Foundation, sous l'égide de la Linux Foundation, aux côtés de goose de Block et d'AGENTS.md d'OpenAI, avec AWS, Google et Microsoft parmi les membres. On comptait alors plus de 10 000 serveurs MCP publiés, et le protocole était pris en charge par Claude, ChatGPT, Gemini, Microsoft Copilot, VS Code et Cursor.",
+            "Un second standard couvre une autre couche. Le protocole Agent2Agent (A2A), créé par Google et lui aussi hébergé par la Linux Foundation, décrit la manière dont des agents de fournisseurs ou d'organisations différents dialoguent entre eux. Il a atteint sa première version stable et, en avril 2026, le soutien de plus de 150 organisations, avec des intégrations dans les plateformes d'agents de Microsoft et d'AWS. Les deux sont complémentaires : MCP relie un agent à des outils et à des données, A2A relie des agents entre eux.",
+            "Pour une entreprise, cela signifie deux choses. Une intégration construite une fois peut être réutilisée d'un modèle à l'autre, ce qui réduit le coût d'un changement de fournisseur. Et la partie difficile d'un projet d'agent n'est plus la connexion : c'est de décider ce que l'agent a le droit de faire.",
+          ],
+        },
+        {
+          heading: "Ce qui tient en production",
+          paragraphs: [
+            "Les agents qui survivent au contact du travail réel ont quelques traits communs. Ils ont une mission étroite et un responsable désigné : trier des tickets de support, rapprocher des factures de bons de commande, préparer un premier jet de questionnaire de conformité. Ils ont un résultat mesurable, comme le temps de traitement ou le taux d'erreur, et une mesure de référence prise avant le début du projet.",
+            "Ils sont testés comme du logiciel. Un jeu d'exemples réels, dont les bonnes réponses sont connues, est rejoué chaque fois que le prompt, le modèle ou un outil change, car une modification qui améliore un cas en casse souvent un autre. Chaque exécution est tracée, de sorte que lorsqu'un problème survient vous pouvez voir quelle étape, quel appel d'outil et quel élément de contexte en est la cause. Le coût par tâche est suivi au même titre que la qualité.",
+            "Et ils gardent des personnes dans la boucle là où cela compte. Lire et rédiger peuvent être automatiques. Envoyer de l'argent, supprimer des données, contacter un client ou modifier un système de production devrait exiger une validation humaine tant que l'historique ne justifie pas autre chose. C'est plus lent qu'une démonstration entièrement autonome, et c'est la raison pour laquelle le projet tourne encore un an plus tard.",
+          ],
+        },
+        {
+          heading: "Sécurité : traiter l'agent comme une identité",
+          paragraphs: [
+            "Un agent lit des contenus que vous ne contrôlez pas (e-mails, pages web, documents) puis agit. Cette combinaison crée un risque que les applications classiques n'ont pas : l'injection de prompt, où des instructions cachées dans le contenu détournent l'agent. Elle figure en tête de la liste des risques de l'OWASP pour les applications à base de LLM, et l'OWASP a depuis publié un Top 10 consacré aux applications agentiques.",
+            "Il n'existe pas de correctif unique : la défense est donc architecturale. Donnez à chaque agent sa propre identité et les permissions minimales pour sa tâche. Gardez les identifiants hors du contexte du modèle. Séparez ce que l'agent peut lire de ce qu'il peut modifier. Journalisez chaque action. Pour les données sensibles, décidez délibérément où le modèle s'exécute et où vont les données ; pour certaines charges de travail, la bonne réponse est une infrastructure que vous maîtrisez.",
+          ],
+        },
+        {
+          heading: "Les règles européennes qui s'appliquent",
+          paragraphs: [
+            "Les agents n'échappent pas à la réglementation. En vertu de l'AI Act européen, les personnes doivent être informées lorsqu'elles interagissent avec un système d'IA, une obligation qui s'applique depuis le 2 août 2026. Les agents utilisés dans des domaines tels que le recrutement ou les décisions de crédit relèveront du régime des systèmes à haut risque, désormais prévu pour le 2 décembre 2027. Le RGPD s'applique dès que des données personnelles sont traitées et, pour de nombreuses organisations, NIS2 fixe le socle de sécurité. Rien de tout cela n'empêche le déploiement, mais cela oriente la conception : la journalisation, le contrôle humain et une documentation claire relèvent à la fois de la bonne ingénierie et de l'obligation légale.",
+          ],
+        },
+        {
+          heading: "Un parcours de quatre-vingt-dix jours, du pilote à la production",
+          paragraphs: [
+            "Semaines 1 et 2 : choisissez un processus dont le responsable est volontaire, avec un volume suffisant pour compter et des conséquences tolérables si l'agent se trompe. Mesurez sa performance actuelle. Rassemblez cinquante à cent cas réels comme jeu de test.",
+            "Semaines 3 à 6 : construisez l'agent en commençant par un accès en lecture seule. Connectez les outils nécessaires au moyen d'interfaces standard, rejouez le jeu de test à chaque modification, et passez en revue les échecs chaque semaine avec le responsable du processus.",
+            "Semaines 7 à 10 : mettez-le entre les mains d'un petit groupe d'utilisateurs, avec une validation humaine pour chaque action qui modifie quelque chose. Tracez chaque exécution. Suivez la qualité, le temps gagné et le coût par tâche.",
+            "Semaines 11 à 13 : comparez à la mesure de référence et décidez. Étendre, ajuster ou arrêter. Un projet qui s'arrête à ce stade avec des chiffres clairs a coûté peu et appris beaucoup ; un projet qui dérive pendant un an sans chiffres, c'est ainsi que l'on arrive aux 40 %.",
+          ],
+        },
+        {
+          heading: "Comment Shady AS peut vous aider",
+          paragraphs: [
+            "Chez Shady AS SRL, nous aidons les organisations à passer des expérimentations à des systèmes qui tournent. Nos consultants combinent leur expertise en développement logiciel, en données et en cybersécurité pour choisir le bon premier cas d'usage, intégrer les agents à vos applications et données existantes, et mettre en place les tests, les contrôles d'accès et la supervision que la production exige.",
+            "Chaque collaboration commence par une consultation gratuite pour comprendre vos objectifs et votre paysage IT actuel. Contactez-nous pour voir où un agent pourrait soulager réellement votre équipe.",
+          ],
+        },
+      ],
+      nl: [
+        {
+          paragraphs: [
+            "Artificiële intelligentie is geen zeldzaamheid meer in Europese bedrijven. Uit de recentste cijfers van Eurostat blijkt dat 20,0% van de EU-ondernemingen met tien of meer werknemers in 2025 AI gebruikte, tegenover 13,5% een jaar eerder. België loopt duidelijk voorop: volgens Statbel gebruikte 34,5% van de Belgische bedrijven in 2025 minstens één AI-technologie, tegenover 24,7% in 2024, waarmee het land in de Europese top vijf staat. Bij de grote Belgische ondernemingen ligt het aandeel boven 76%; bij de kleine is het iets meer dan 28%.",
+            "Gebruik is echter niet hetzelfde als resultaat. In oktober 2026 meldde Gartner dat slechts 13% van de 2.002 ondervraagde CIO's en technologieverantwoordelijken zegt dat hun onderneming aanzienlijke of transformationele waarde uit AI heeft gehaald. Een maand eerder stelde het vast dat slechts 22% van de organisaties AI heeft opgeschaald over meerdere bedrijfsonderdelen. Nergens is die kloof tussen proberen en opleveren groter dan bij AI-agents, de systemen waarmee iedereen in 2026 een pilot draait.",
+          ],
+        },
+        {
+          heading: "Wat een AI-agent is, en wat niet",
+          paragraphs: [
+            "Een chatbot beantwoordt een vraag. Een agent krijgt een doel en werkt ernaartoe: hij plant stappen, roept tools aan zoals zoekfuncties, databanken, bedrijfsapplicaties of code-uitvoering, controleert het resultaat en gaat door tot de taak klaar is of hij een mens nodig heeft. Die lus maakt agents nuttig voor werk dat over meerdere systemen loopt, en maakt ze ook moeilijker te beheersen dan één vraag en één antwoord.",
+            "Het etiket wordt veel ruimer gebruikt dan de capaciteit. Gartner noemt dat agent washing: bestaande assistenten, chatbots en automatiseringsscripts die een nieuwe naam krijgen. Midden 2025 schatte het dat slechts ongeveer 130 van de duizenden leveranciers die agentic AI claimen het ook echt aanbieden. Vraag, voordat u producten vergelijkt, wat het systeem zelfstandig kan, welke tools het mag gebruiken en wat het tegenhoudt.",
+          ],
+        },
+        {
+          heading: "De productiekloof in cijfers",
+          paragraphs: [
+            "Enquêtes over agents spreken elkaar sterk tegen, vooral omdat ze uitrol anders definiëren. De zorgvuldigste vertellen een consistent verhaal. De State of AI-enquête van McKinsey, gepubliceerd in november 2025, vond dat 23% van de organisaties ergens in het bedrijf een agentic AI-systeem opschaalt en dat nog eens 39% experimenteert. Gartner voorspelde in juni 2025 dat meer dan 40% van de agentic AI-projecten tegen eind 2027 zou worden stopgezet, wegens oplopende kosten, onduidelijke bedrijfswaarde en ontoereikende risicobeheersing.",
+            "Die drie redenen kunt u als checklist lezen, want ze zijn alle drie te vermijden. Kosten lopen op wanneer niemand meet wat een taak per uitvoering kost. De bedrijfswaarde is onduidelijk wanneer de pilot is gekozen omdat hij indruk maakte en niet omdat een proceseigenaar hem wilde. De risicobeheersing schiet tekort wanneer de agent ruime toegang kreeg om de demo te laten werken.",
+          ],
+        },
+        {
+          heading: "Het leidingwerk is gestandaardiseerd",
+          paragraphs: [
+            "De belangrijkste verandering van het voorbije jaar is weinig spectaculair. Een agent met uw systemen verbinden betekende vroeger een integratie op maat voor elk model en elke tool. Het Model Context Protocol (MCP), in november 2024 door Anthropic als open source vrijgegeven, legt een gemeenschappelijke manier vast om tools en gegevens beschikbaar te stellen aan elk compatibel model. In december 2025 werd het ondergebracht bij de nieuwe Agentic AI Foundation onder de Linux Foundation, samen met goose van Block en AGENTS.md van OpenAI, met onder meer AWS, Google en Microsoft als leden. Op dat moment waren er meer dan 10.000 gepubliceerde MCP-servers, en het protocol werd ondersteund door Claude, ChatGPT, Gemini, Microsoft Copilot, VS Code en Cursor.",
+            "Een tweede standaard dekt een andere laag af. Het Agent2Agent-protocol (A2A), ontwikkeld door Google en eveneens ondergebracht bij de Linux Foundation, beschrijft hoe agents van verschillende leveranciers of organisaties met elkaar communiceren. Het heeft zijn eerste stabiele versie bereikt en had in april 2026 de steun van meer dan 150 organisaties, met integraties in de agentplatformen van Microsoft en AWS. De twee vullen elkaar aan: MCP verbindt een agent met tools en gegevens, A2A verbindt agents met elkaar.",
+            "Voor een bedrijf betekent dat twee dingen. Een integratie die één keer is gebouwd, kan over modellen heen worden hergebruikt, wat de kosten van een leverancierswissel verlaagt. En het moeilijke deel van een agentproject is niet langer de verbinding: het is beslissen wat de agent mag doen.",
+          ],
+        },
+        {
+          heading: "Wat in productie overeind blijft",
+          paragraphs: [
+            "De agents die het contact met echt werk overleven, hebben een paar kenmerken gemeen. Ze hebben een smalle taak met een aangewezen eigenaar: supporttickets sorteren, facturen afstemmen met bestelbonnen, een eerste versie van een compliancevragenlijst voorbereiden. Ze hebben een meetbaar resultaat, zoals doorlooptijd of foutpercentage, en een nulmeting van vóór de start van het project.",
+            "Ze worden getest zoals software. Een reeks echte voorbeelden met bekende goede antwoorden wordt opnieuw uitgevoerd telkens wanneer de prompt, het model of een tool verandert, want een wijziging die één geval verbetert, breekt vaak een ander. Elke uitvoering wordt getraceerd, zodat u bij een fout kunt zien welke stap, welke toolaanroep en welk stuk context de oorzaak was. De kosten per taak worden samen met de kwaliteit opgevolgd.",
+            "En ze houden mensen in de lus waar het ertoe doet. Lezen en opstellen mag automatisch. Geld overmaken, gegevens verwijderen, een klant contacteren of een productiesysteem wijzigen vraagt een menselijke goedkeuring, tot de staat van dienst iets anders rechtvaardigt. Dat is trager dan een volledig autonome demo, en het is de reden waarom het project een jaar later nog draait.",
+          ],
+        },
+        {
+          heading: "Beveiliging: behandel de agent als een identiteit",
+          paragraphs: [
+            "Een agent leest inhoud die u niet controleert (e-mails, webpagina's, documenten) en onderneemt daarna acties. Die combinatie schept een risico dat klassieke applicaties niet hebben: promptinjectie, waarbij instructies die in de inhoud verborgen zitten de agent een andere kant op sturen. Ze staat bovenaan de OWASP-lijst van risico's voor LLM-applicaties, en OWASP heeft intussen een aparte Top 10 voor agentic applicaties gepubliceerd.",
+            "Er bestaat geen enkele oplossing die alles dekt, dus de verdediging zit in de architectuur. Geef elke agent een eigen identiteit en de minimale rechten voor zijn taak. Houd inloggegevens buiten de context van het model. Scheid wat de agent mag lezen van wat hij mag wijzigen. Log elke actie. Beslis voor gevoelige gegevens bewust waar het model draait en waar de gegevens naartoe gaan; voor sommige workloads is infrastructuur die u zelf beheert het juiste antwoord.",
+          ],
+        },
+        {
+          heading: "De Europese regels die gelden",
+          paragraphs: [
+            "Agents staan niet buiten de regelgeving. Onder de Europese AI Act moeten mensen weten wanneer ze met een AI-systeem communiceren, een plicht die sinds 2 augustus 2026 geldt. Agents die worden ingezet in domeinen zoals werving of kredietbeslissingen zullen onder het regime voor hoogrisicosystemen vallen, dat nu op 2 december 2027 ingaat. De AVG is van toepassing zodra persoonsgegevens worden verwerkt, en voor veel organisaties legt NIS2 de basis voor beveiliging vast. Niets hiervan verhindert een uitrol, maar het bepaalt wel het ontwerp: logging, menselijk toezicht en duidelijke documentatie zijn zowel goed vakwerk als een wettelijke vereiste.",
+          ],
+        },
+        {
+          heading: "Een traject van negentig dagen van pilot naar productie",
+          paragraphs: [
+            "Week 1 en 2: kies één proces met een eigenaar die wil meewerken, met genoeg volume om ertoe te doen en met aanvaardbare gevolgen als de agent zich vergist. Meet hoe het vandaag presteert. Verzamel vijftig tot honderd echte gevallen als testset.",
+            "Week 3 tot 6: bouw de agent eerst met alleen-lezentoegang. Verbind de nodige tools via standaardinterfaces, voer de testset uit bij elke wijziging, en bespreek de fouten elke week met de proceseigenaar.",
+            "Week 7 tot 10: laat een kleine groep gebruikers ermee werken, met menselijke goedkeuring voor elke actie die iets wijzigt. Traceer elke uitvoering. Volg kwaliteit, tijdwinst en kosten per taak op.",
+            "Week 11 tot 13: vergelijk met de nulmeting en beslis. Uitbreiden, bijsturen of stoppen. Een project dat hier stopt met duidelijke cijfers heeft weinig gekost en veel geleerd; een project dat een jaar blijft aanmodderen zonder cijfers, zo komt men aan die 40%.",
+          ],
+        },
+        {
+          heading: "Hoe Shady AS kan helpen",
+          paragraphs: [
+            "Bij Shady AS SRL helpen we organisaties om van experimenten naar systemen te gaan die draaien. Onze consultants combineren expertise in softwareontwikkeling, data en cybersecurity om de juiste eerste toepassing te kiezen, agents te integreren met uw bestaande applicaties en gegevens, en de tests, toegangscontroles en monitoring in te richten die productie vereist.",
+            "Elke samenwerking begint met een gratis consultatie om uw doelstellingen en uw huidige IT-landschap te begrijpen. Neem contact met ons op om te bespreken waar een agent echt werk van uw team kan overnemen.",
+          ],
+        },
+      ],
+    },
+  },
 ];
 
 export function getArticleBySlug(slug: string): BlogArticle | undefined {
@@ -3577,9 +4192,39 @@ export function getAllSlugs(): string[] {
   return blogArticles.map((a) => a.slug);
 }
 
+function dateLocale(locale: string): string {
+  return locale === "en" ? "en-GB" : locale === "fr" ? "fr-BE" : "nl-BE";
+}
+
 export function formatDate(dateStr: string, locale: string): string {
-  return new Date(dateStr).toLocaleDateString(
-    locale === "en" ? "en-GB" : locale === "fr" ? "fr-BE" : "nl-BE",
-    { year: "numeric", month: "long", day: "numeric" }
-  );
+  return new Date(dateStr).toLocaleDateString(dateLocale(locale), {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
+
+/** Compact date for table rows, e.g. "3 Dec 2025". */
+export function formatShortDate(dateStr: string, locale: string): string {
+  return new Date(dateStr).toLocaleDateString(dateLocale(locale), {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
+}
+
+export interface NumberedArticle extends BlogArticle {
+  /** Position in publication order, zero-padded ("01" is the oldest). */
+  no: string;
+}
+
+/** All articles, newest first, numbered in publication order. */
+export function getNumberedArticles(): NumberedArticle[] {
+  return [...blogArticles]
+    .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+    .map((article, index) => ({
+      ...article,
+      no: String(index + 1).padStart(2, "0"),
+    }))
+    .reverse();
 }

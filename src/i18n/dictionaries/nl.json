@@ -6,11 +6,23 @@
     "about": "Over Ons",
     "contact": "Contact"
   },
+  "strip": {
+    "role": "IT-Advies",
+    "city": "Brussel"
+  },
   "hero": {
-    "title": "Uw Betrouwbare IT-Partner in Brussel",
+    "title": "Waar IT naartoe gaat, en hoe uw bedrijf er komt.",
     "subtitle": "Shady AS SRL levert innovatieve IT-adviesoplossingen om uw bedrijf te laten groeien in het digitale tijdperk.",
     "cta": "Neem Contact Op",
-    "learnMore": "Onze Diensten"
+    "learnMore": "Onze Diensten",
+    "pill": "Gratis eerste consultatie"
+  },
+  "home": {
+    "writing": "Artikels",
+    "allArticles": "Alle artikels",
+    "colNo": "Nr.",
+    "colRead": "Leestijd",
+    "colDate": "Datum"
   },
   "services": {
     "title": "Onze Diensten",

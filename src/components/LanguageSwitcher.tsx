@@ -1,32 +1,38 @@
 "use client";
 
+import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { i18n } from "@/i18n/config";
+import { i18n, type Locale } from "@/i18n/config";
+
+const languageNames: Record<Locale, string> = {
+  nl: "Nederlands",
+  fr: "Français",
+  en: "English",
+};
 
 export default function LanguageSwitcher({ locale }: { locale: string }) {
   const pathname = usePathname();
 
-  function switchLocale(newLocale: string) {
-    // Remove current locale prefix and prepend new one
+  function localizedPath(newLocale: string) {
+    // Swap the current locale prefix for the new one
     const segments = pathname.split("/");
     segments[1] = newLocale;
-    window.location.href = segments.join("/");
+    return segments.join("/");
   }
 
   return (
-    <div className="flex items-center gap-1">
+    <div className="lang-switch">
       {i18n.locales.map((loc) => (
-        <button
+        <Link
           key={loc}
-          onClick={() => switchLocale(loc)}
-          className={`px-3 py-1.5 text-sm font-medium transition-colors ${
-            locale === loc
-              ? "bg-navy text-white"
-              : "text-navy hover:bg-gray-100"
-          }`}
+          href={localizedPath(loc)}
+          hrefLang={loc}
+          lang={loc}
+          aria-label={languageNames[loc]}
+          aria-current={locale === loc ? "true" : undefined}
         >
-          {loc.toUpperCase()}
-        </button>
+          {loc}
+        </Link>
       ))}
     </div>
   );

@@ -6,11 +6,23 @@
     "about": "À propos",
     "contact": "Contact"
   },
+  "strip": {
+    "role": "Conseil IT",
+    "city": "Bruxelles"
+  },
   "hero": {
-    "title": "Votre Partenaire IT de Confiance à Bruxelles",
+    "title": "Où va l'IT, et comment y amener votre entreprise.",
     "subtitle": "Shady AS SRL propose des solutions innovantes en conseil IT pour aider votre entreprise à prospérer à l'ère du numérique.",
     "cta": "Contactez-nous",
-    "learnMore": "Nos Services"
+    "learnMore": "Nos Services",
+    "pill": "Première consultation gratuite"
+  },
+  "home": {
+    "writing": "Articles",
+    "allArticles": "Tous les articles",
+    "colNo": "N°",
+    "colRead": "Lecture",
+    "colDate": "Date"
   },
   "services": {
     "title": "Nos Services",
