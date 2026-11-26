@@ -1,7 +1,6 @@
 import {
   IBM_Plex_Mono,
   IBM_Plex_Sans,
-  IBM_Plex_Serif,
   Instrument_Serif,
 } from "next/font/google";
 import type { Metadata, Viewport } from "next";
@@ -18,18 +17,11 @@ const plexSans = IBM_Plex_Sans({
   weight: ["400", "500", "600"],
 });
 
+// Display face: page and section headlines only.
 const instrumentSerif = Instrument_Serif({
   variable: "--font-instrument-serif",
   subsets: ["latin"],
   weight: "400",
-  style: ["normal", "italic"],
-});
-
-const plexSerif = IBM_Plex_Serif({
-  variable: "--font-plex-serif",
-  subsets: ["latin"],
-  weight: "400",
-  style: ["normal", "italic"],
 });
 
 const plexMono = IBM_Plex_Mono({
@@ -38,7 +30,7 @@ const plexMono = IBM_Plex_Mono({
   weight: ["400", "500"],
 });
 
-const fontVariables = [plexSans, instrumentSerif, plexSerif, plexMono]
+const fontVariables = [plexSans, instrumentSerif, plexMono]
   .map((font) => font.variable)
   .join(" ");
 

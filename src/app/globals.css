@@ -5,6 +5,8 @@
  * A monochrome editorial system shared with shady.me: ink on cool paper in
  * light mode, the shady.me near-black palette in dark mode. The theme follows
  * the visitor's system setting.
+ * Type: IBM Plex Sans carries everything that is read. Instrument Serif
+ * (--display) is reserved for page and section headlines at large sizes.
  * SVG assets (public/logo.svg, src/app/icon.svg) hard-code the dark palette.
  * Update those files when changing it.
  */
@@ -21,7 +23,6 @@
 
   --sans: var(--font-plex-sans), system-ui, sans-serif;
   --display: var(--font-instrument-serif), Georgia, serif;
-  --serif: var(--font-plex-serif), Georgia, serif;
   --mono: var(--font-plex-mono), ui-monospace, monospace;
 
   --gutter: clamp(16px, 1.95vw, 40px);
@@ -52,7 +53,6 @@
   --color-hairline: var(--hairline);
   --font-sans: var(--sans);
   --font-display: var(--display);
-  --font-serif: var(--serif);
   --font-mono: var(--mono);
 }
 
@@ -238,9 +238,9 @@
     grid-column: 1 / -1;
     font-family: var(--display);
     font-weight: 400;
-    font-size: clamp(48px, 8.4vw, 172px);
-    line-height: 0.94;
-    letter-spacing: -0.035em;
+    font-size: clamp(46px, 8vw, 164px);
+    line-height: 1;
+    letter-spacing: -0.02em;
     color: var(--strong);
     text-wrap: balance;
   }
@@ -272,16 +272,14 @@
     font-family: var(--display);
     font-weight: 400;
     font-size: clamp(36px, 4.4vw, 88px);
-    line-height: 1;
-    letter-spacing: -0.025em;
+    line-height: 1.04;
+    letter-spacing: -0.015em;
     color: var(--strong);
   }
   .section-sub {
-    max-width: 30em;
-    font-family: var(--display);
-    font-style: italic;
-    font-size: clamp(19px, 1.6vw, 32px);
-    line-height: 1.25;
+    max-width: 34em;
+    font-size: clamp(16px, 1.25vw, 22px);
+    line-height: 1.45;
     color: var(--soft);
   }
 
@@ -316,12 +314,13 @@
     min-width: 0;
   }
   .col-title {
-    font-family: var(--display);
-    font-size: clamp(22px, 2.08vw, 42px);
-    line-height: 1.1;
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: clamp(17px, 1.35vw, 26px);
+    line-height: 1.3;
     letter-spacing: -0.01em;
     text-transform: none;
-    color: var(--ink);
+    color: var(--strong);
   }
   a.essay-row:hover .col-title {
     color: var(--strong);
@@ -361,10 +360,9 @@
     border-top: 1px solid var(--rule);
   }
   .card-title {
-    font-family: var(--display);
-    font-weight: 400;
-    font-size: clamp(26px, 2.4vw, 46px);
-    line-height: 1.05;
+    font-weight: 600;
+    font-size: clamp(19px, 1.5vw, 28px);
+    line-height: 1.2;
     letter-spacing: -0.015em;
     color: var(--strong);
   }
@@ -375,10 +373,8 @@
   }
   .card-note {
     max-width: 44ch;
-    font-family: var(--display);
-    font-style: italic;
-    font-size: clamp(17px, 1.25vw, 23px);
-    line-height: 1.3;
+    font-size: clamp(13px, 0.95vw, 16px);
+    line-height: 1.55;
     color: var(--muted);
   }
 
@@ -396,10 +392,10 @@
     border-top: 1px solid var(--rule);
   }
   .figure-value {
-    font-family: var(--display);
-    font-size: clamp(56px, 7.4vw, 152px);
-    line-height: 0.92;
-    letter-spacing: -0.04em;
+    font-weight: 500;
+    font-size: clamp(44px, 5.2vw, 108px);
+    line-height: 1;
+    letter-spacing: -0.045em;
     color: var(--strong);
   }
 
@@ -427,9 +423,9 @@
     color: var(--muted);
   }
   .faq-q {
-    font-family: var(--display);
-    font-size: clamp(22px, 2.08vw, 42px);
-    line-height: 1.1;
+    font-weight: 500;
+    font-size: clamp(17px, 1.35vw, 26px);
+    line-height: 1.3;
     letter-spacing: -0.01em;
   }
   .faq-icon {
@@ -469,9 +465,9 @@
   .cta-title {
     font-family: var(--display);
     font-weight: 400;
-    font-size: clamp(44px, 7.6vw, 156px);
-    line-height: 0.94;
-    letter-spacing: -0.035em;
+    font-size: clamp(42px, 7.2vw, 148px);
+    line-height: 1;
+    letter-spacing: -0.02em;
     color: var(--strong);
     text-wrap: balance;
   }
@@ -501,9 +497,9 @@
     margin-top: clamp(8px, 1vw, 20px);
     font-family: var(--display);
     font-weight: 400;
-    font-size: clamp(52px, 9.6vw, 200px);
-    line-height: 0.92;
-    letter-spacing: -0.035em;
+    font-size: clamp(50px, 9.2vw, 190px);
+    line-height: 1;
+    letter-spacing: -0.02em;
     color: var(--strong);
   }
 
@@ -523,17 +519,13 @@
     padding-top: 0.5em;
     color: var(--muted);
   }
-  .service-title,
-  .split-title {
-    font-family: var(--display);
-    font-weight: 400;
-    font-size: clamp(30px, 3.3vw, 68px);
-    line-height: 1;
-    letter-spacing: -0.02em;
-    color: var(--strong);
-  }
   .service-title {
     grid-column: 2 / span 4;
+    font-weight: 600;
+    font-size: clamp(22px, 2vw, 40px);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--strong);
   }
   .service-body {
     grid-column: 7 / span 6;
@@ -549,6 +541,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
     column-gap: var(--col-gap);
+    font-size: clamp(14px, 1.02vw, 17px);
+    line-height: 1.45;
   }
   .feature-list li {
     padding: 10px 0;
@@ -563,15 +557,20 @@
   }
   .split-title {
     grid-column: 1 / span 4;
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(32px, 3.4vw, 68px);
+    line-height: 1.04;
+    letter-spacing: -0.015em;
+    color: var(--strong);
   }
   .split-body {
     grid-column: 6 / span 7;
     max-width: 44em;
   }
   .lead-prose {
-    font-family: var(--serif);
-    font-size: clamp(18px, 1.32vw, 25px);
-    line-height: 1.7;
+    font-size: clamp(17px, 1.25vw, 23px);
+    line-height: 1.65;
   }
   .lead-prose p + p {
     margin-top: 1.1em;
@@ -593,9 +592,9 @@
   }
   .detail-value {
     grid-column: 4 / span 9;
-    font-family: var(--display);
-    font-size: clamp(26px, 3vw, 60px);
-    line-height: 1.05;
+    font-weight: 500;
+    font-size: clamp(20px, 1.9vw, 36px);
+    line-height: 1.25;
     letter-spacing: -0.015em;
     color: var(--strong);
     overflow-wrap: anywhere;
@@ -642,15 +641,14 @@
   .article-title {
     font-family: var(--display);
     font-weight: 400;
-    font-size: clamp(40px, 4.9vw, 104px);
-    line-height: 0.98;
-    letter-spacing: -0.025em;
+    font-size: clamp(38px, 4.6vw, 96px);
+    line-height: 1.04;
+    letter-spacing: -0.015em;
     color: var(--strong);
     text-wrap: balance;
   }
   .article-dek {
-    font-family: var(--serif);
-    font-size: clamp(19px, 1.6vw, 30px);
+    font-size: clamp(18px, 1.45vw, 27px);
     line-height: 1.5;
     color: var(--soft);
   }
@@ -660,19 +658,17 @@
     border-top: 1px solid var(--rule);
   }
   .prose {
-    font-family: var(--serif);
-    font-size: clamp(18px, 1.32vw, 25px);
+    font-size: clamp(17px, 1.2vw, 22px);
     line-height: 1.7;
   }
   .prose p {
     margin-bottom: 1.1em;
   }
   .prose h2 {
-    margin: 1.6em 0 0.6em;
-    font-family: var(--display);
-    font-weight: 400;
-    font-size: 1.9em;
-    line-height: 1.1;
+    margin: 1.8em 0 0.6em;
+    font-weight: 600;
+    font-size: 1.35em;
+    line-height: 1.25;
     letter-spacing: -0.015em;
     color: var(--strong);
   }
